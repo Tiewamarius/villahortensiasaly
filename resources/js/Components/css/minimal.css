@@ -1,0 +1,410 @@
+a,
+a:hover,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.knsl-link,
+.knsl-navigation a.knsl-left-link,
+.knsl-navigation a.knsl-right-link,
+.knsl-uni-slider-nav-panel .knsl-uni-slider-pagination,
+.knsl-uni-slider-nav-panel .knsl-uni-nav .knsl-uni-slider-next,
+.knsl-uni-slider-nav-panel .knsl-uni-nav .knsl-uni-slider-prev,
+.knsl-top-bar .container .knsl-left-side .knsl-logo-frame .knsl-logo-text,
+.hf-type-header .container .knsl-left-side .knsl-logo-frame .knsl-logo-text,
+.knsl-menu nav ul li a,
+.knsl-popup-frame .knsl-book-popup .knsl-close-popup:hover,
+.knsl-slider-nav-panel .knsl-about-slider-1-pagination,
+.knsl-slider-nav-panel .knsl-about-slider-nav .knsl-about-slider-1-next,
+.knsl-slider-nav-panel .knsl-about-slider-nav .knsl-about-slider-1-prev,
+.knsl-side-menu .knsl-sm-link,
+.knsl-filter .knsl-work-category,
+.knsl-price-card .knsl-price-number .knsl-price-number-after,
+.knsl-price-card .knsl-price-number .mphb-price-period,
+.knsl-price-card .knsl-price-number .mphb-tax-information,
+.knsl-price-card .knsl-price-number .mphb-regular-price strong,
+.single-mphb_room_service .knsl-room-features-lg .mphb-price-wrapper,
+.mphb-room-type .mphb-room-type-categories .mphb-attribute-value a,
+.mphb-room-type-categories .mphb-attribute-value a,
+.mphb-room-type .mphb-room-type-categories .mphb-attribute-value a:hover,
+.mphb-room-type-categories .mphb-attribute-value a:hover,
+.mphb-room-type .mphb-view-details-button-wrapper a,
+.mphb-room-type .mphb-view-details-button-wrapper a:hover,
+.mphb-checkout-section .mphb-price-breakdown a,
+.mphb-checkout-section .mphb-price-breakdown a:hover,
+.mphb-checkout-section .mphb-price-breakdown tfoot th,
+.mphb_sc_checkout-form .mphb-total-price,
+.mphb_sc_booking_confirmation .mphb-booking-details-section .mphb-booking-details > li span.value,
+.accommodations-list a,
+.accommodations-list a:hover,
+.mphb_sc_search_results-wrapper .mphb-recommendation .mphb-recommendation-total,
+.content-sidebar table caption,
+.single-post-text table caption,
+.content-sidebar th,
+.single-post-text table th,
+.knsl-minicart-window .woocommerce-mini-cart .woocommerce-mini-cart-item .remove_from_cart_button,
+.woocommerce #reviews #comments ol.commentlist li .comment-text p.meta strong,
+.woocommerce button[name="update_cart"].button,
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a,
+.mphb_sc_account .mphb-account-menu ul li.active a,
+.woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link.is-active a,
+.woocommerce .widget_shopping_cart .cart_list li a.remove,
+.woocommerce.widget_shopping_cart .cart_list li a.remove,
+.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item--chosen a::before,
+.woocommerce .widget_layered_nav_filters ul li a::before,
+.knsl-app.knsl-app-minimal .knsl-badge,
+.knsl-app.knsl-app-minimal .knsl-badge p .mphb-price {
+	color: #1e2031;
+}
+
+.knsl-menu-btn span,
+.knsl-menu-btn span:after,
+.knsl-menu-btn span:before {
+	background-color: #1e2031;
+}
+
+.knsl-cart svg path {
+	fill: #1e2031;
+}
+
+.card,
+.knsl-testimonial-card .knsl-name-and-text blockquote,
+.knsl-faq,
+.mphb-room-type .mphb-room-type-facilities .mphb-attribute-value,
+.mphb-room-type-facilities .mphb-attribute-value,
+.mphb-checkout-section,
+.mphb-login-form,
+.single-post-text table,
+.content-sidebar table caption,
+.single-post-text table caption,
+.content-sidebar .search-form input[type=text],
+.content-sidebar .search-form input[type=email],
+.content-sidebar .search-form input[type=password],
+.content-sidebar .search-form input[type=datetime],
+.content-sidebar .search-form input[type=date],
+.content-sidebar .search-form input[type=month],
+.content-sidebar .search-form input[type=time],
+.content-sidebar .search-form input[type=week],
+.content-sidebar .search-form input[type=search],
+.content-sidebar .search-form textarea,
+.content-sidebar .search-form textarea.form-control,
+.wp-block-search input[type=text],
+.wp-block-search input[type=email],
+.wp-block-search input[type=password],
+.wp-block-search input[type=datetime],
+.wp-block-search input[type=date],
+.wp-block-search input[type=month],
+.wp-block-search input[type=time],
+.wp-block-search input[type=week],
+.wp-block-search input[type=search],
+.wp-block-search textarea,
+.wp-block-search textarea.form-control,
+blockquote,
+.knsl-navigation,
+.knsl-uni-slider-nav-panel .knsl-uni-slider-pagination,
+.knsl-uni-slider-nav-panel .knsl-uni-nav,
+.knsl-preloader-frame,
+.knsl-top-bar,
+.hf-type-header,
+.knsl-menu nav ul li ul,
+.knsl-banner .knsl-banner-content .knsl-scroll-hint-frame .knsl-scroll-hint:before,
+.knsl-icon-box.knsl-icon-box-sm,
+.knsl-features-card,
+.knsl-features-card:before,
+.knsl-features-card:after,
+.knsl-quote-with-author .knsl-photo-frame:before,
+.knsl-quote-with-author .knsl-photo-frame:after,
+.knsl-slider-nav-panel .knsl-about-slider-1-pagination,
+.knsl-slider-nav-panel .knsl-about-slider-nav,
+.knsl-about-card,
+.knsl-blog-card,
+.knsl-menu-card,
+.knsl-room-card,
+.knsl-blog-card .knsl-description-frame .knsl-room-features .knsl-feature .knsl-icon-frame,
+.knsl-menu-card .knsl-description-frame .knsl-room-features .knsl-feature .knsl-icon-frame,
+.knsl-room-card .knsl-description-frame .knsl-room-features .knsl-feature .knsl-icon-frame,
+.knsl-ath-card,
+.knsl-ath-card .knsl-card-description,
+.knsl-team-card,
+.knsl-side-menu,
+.knsl-pagination li a,
+.knsl-pagination a,
+.knsl-pagination span,
+.page-links a,
+.page-links span,
+.knsl-filter .knsl-work-category,
+.knsl-room-detail-slider-frame,
+.knsl-price-card,
+.knsl-room-features-lg,
+.knsl-review-card,
+.knsl-blog-post,
+.knsl-demo-item,
+input,
+textarea,
+.knsl-book-form,
+.datepicker,
+.mphb-room-type,
+.mphb-room-type .mphb-loop-room-type-attributes li:after,
+.mphb-single-room-type-attributes li:after,
+.mphb-recommendation, .mphb-reservation-cart,
+.mphb-checkbox-label input[type="checkbox"] + span:before,
+.mphb-terms-and-conditions-accept label input[type="checkbox"] + span:before,
+label.checkbox-label input[type="checkbox"] + span:before,
+.login-remember label input[type="checkbox"] + span:before,
+.knsl-room-default-post .mphb-booking-form,
+.content-sidebar table,
+.single-post-text table,
+.single-post .knsl-room-features-lg .knsl-feature .knsl-icon-frame,
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product,
+.woocommerce .widget_price_filter .price_slider_wrapper .ui-widget-content,
+.woocommerce .widget_price_filter .ui-slider .ui-slider-handle,
+.knsl-minicart-window,
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message,
+.woocommerce div.product .woocommerce-tabs .panel,
+.woocommerce ul.cart_list,
+.woocommerce ul.product_list_widget {
+	background-color: #ffffff;
+}
+
+.knsl-default-img,
+.knsl-banner,
+.knsl-icon-box,
+.knsl-quote-with-author .knsl-photo-frame,
+.knsl-image-frame,
+.knsl-about-card,
+.knsl-testimonial-card .knsl-avatar-frame,
+.knsl-map-frame,
+.mphb-room-type .mphb-room-type-facilities .mphb-attribute-value:before,
+.mphb-room-type-facilities .mphb-attribute-value:before,
+.mphb_sc_availability_calendar-wrapper,
+.knsl-room-default-post .mphb-single-room-type-post-thumbnail {
+	border-color: #ffffff;
+}
+
+.mphb-login-form-wrap .mphb-login-form-wrap .mphb-login-form:before {
+	border-bottom-color: #ffffff;
+}
+
+.knsl-breadcrumbs {
+	-webkit-box-shadow: 0 0 0 10px #ffffff, 0 2px 48px 0 rgba(0, 0, 0, 0.04);
+  box-shadow: 0 0 0 10px #ffffff, 0 2px 48px 0 rgba(0, 0, 0, 0.04);
+}
+
+@media (max-width: 992px) {
+	.knsl-quote-with-author .knsl-quote-bottom,
+	.knsl-top-bar .container .knsl-right-side,
+  .hf-type-header .container .knsl-right-side,
+  .elementor-widget-kinsley-header-menu {
+		background-color: #ffffff;
+	}
+}
+
+body,
+.knsl-icon-box,
+.knsl-blog-card .knsl-description-frame .knsl-room-features,
+.knsl-menu-card .knsl-description-frame .knsl-room-features,
+.knsl-room-card .knsl-description-frame .knsl-room-features,
+.knsl-blog-post blockquote,
+.mphb-room-type .mphb-loop-room-type-attributes,
+.mphb-single-room-type-attributes,
+.knsl-menu nav ul ul ul {
+	background-color: #ffffff;
+}
+
+@media (max-width: 992px) {
+	.knsl-menu nav ul li ul {
+		background-color: #ffffff;
+	}
+}
+
+.knsl-transition-top,
+.knsl-transition-top:before,
+.knsl-transition-bottom,
+.knsl-transition-bottom:after,
+.knsl-transition-middle,
+.knsl-preloader-frame .knsl-preloader .knsl-preloader-progress,
+.knsl-banner .knsl-cover-frame,
+.knsl-banner-simple,
+.knsl-team-card .knsl-team-member-descr .knsl-member-social li a,
+.knsl-room-features-lg .knsl-feature .knsl-icon-frame,
+.knsl-room-features-lg .mphb-single-room-type-attributes li:after,
+.knsl-book-form form .nice-select,
+.knsl-book-form form input[type="text"],
+.knsl-book-form form input[type="date"],
+.knsl-book-form form .select2 .select2-selection--single,
+.mphb-calendar .mphb-datepicker-light-blue .datepick-ctrl .datepick-cmd:hover,
+.datepick-popup .mphb-datepicker-light-blue .datepick-ctrl .datepick-cmd:hover,
+.mphb-calendar .mphb-datepicker-light-blue .datepick-month a,
+.datepick-popup .mphb-datepicker-light-blue .datepick-month a,
+.mphb-calendar .mphb-datepicker-light-blue .datepick-month a.datepick-weekend,
+.datepick-popup .mphb-datepicker-light-blue .datepick-month a.datepick-weekend,
+.mphb-customer-details input,
+.mphb-customer-details .nice-select,
+.mphb-customer-details textarea,
+.mphb-coupon-code-wrapper input,
+.mphb-login-form input[type="text"],
+.mphb-login-form input[type="password"],
+.mphb-billing-fields input,
+.mphb-billing-fields textarea,
+.mphb-customer-details .select2 .select2-selection--single,
+.mphb-terms-and-conditions-accept label input[type="checkbox"] + span:before,
+label.checkbox-label input[type="checkbox"] + span:before,
+.login-remember label input[type="checkbox"] + span:before,
+.knsl-room-default-post .mphb-booking-form .nice-select,
+.knsl-room-default-post .mphb-booking-form input[type="text"],
+.knsl-room-default-post .mphb-booking-form input[type="date"],
+.knsl-room-default-post .mphb-booking-form .select2 .select2-selection--single,
+::-webkit-scrollbar-track,
+.mphb-checkout-section .mphb-reserve-rooms-details,
+.mphb-checkout-section .mphb-price-breakdown .mphb-price-breakdown-group td,
+.mphb-checkout-section .mphb-price-breakdown tfoot th,
+.mphb-checkout-section .mphb-price-breakdown tfoot td,
+.mphb-gateways-list .mphb-gateway input[type="radio"] + label:before,
+.mphb-stripe-payment-container .StripeElement,
+.knsl-transition-top:after,
+.knsl-transition-bottom:before,
+.woocommerce-tabs input[type="text"],
+.woocommerce-tabs input[type="email"],
+.woocommerce-tabs input[type="tel"],
+.woocommerce-tabs textarea,
+.woocommerce-tabs .select2-container--default .select2-selection--single,
+#add_payment_method #payment div.payment_box,
+.woocommerce-cart #payment div.payment_box,
+.woocommerce-checkout #payment div.payment_box {
+	background-color: #ffffff;
+}
+
+#add_payment_method #payment div.payment_box::before,
+.woocommerce-cart #payment div.payment_box::before,
+.woocommerce-checkout #payment div.payment_box::before {
+	border-bottom-color: #ffffff;
+}
+
+.knsl-transition-top:before {
+	background-color: #ffffff;
+	background: linear-gradient(135deg, #ffffff 25%, transparent 25%) -50px 0, linear-gradient(225deg, #ffffff 25%, transparent 25%) -50px 0, linear-gradient(315deg, #ffffff 25%, transparent 25%), linear-gradient(45deg, #ffffff 25%, transparent 25%);
+	background-size: 50px 50px;
+	background-color: #ffffff;
+}
+
+.knsl-transition-bottom:after {
+	background-color: #ffffff;
+	background: linear-gradient(135deg, #ffffff 25%, transparent 25%) -50px 0, linear-gradient(225deg, #ffffff 25%, transparent 25%) -50px 0, linear-gradient(315deg, #ffffff 25%, transparent 25%), linear-gradient(45deg, #ffffff 25%, transparent 25%);
+	background-size: 50px 50px;
+	background-color: #ffffff;
+}
+
+.knsl-btn,
+.knsl-btn:focus,
+.button,
+.button:focus,
+input[type="submit"],
+input#submit,
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover,
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover,
+.woocommerce #respond input#submit.alt.disabled,
+.woocommerce #respond input#submit.alt.disabled:hover,
+.woocommerce #respond input#submit.alt:disabled,
+.woocommerce #respond input#submit.alt:disabled:hover,
+.woocommerce #respond input#submit.alt:disabled[disabled],
+.woocommerce #respond input#submit.alt:disabled[disabled]:hover,
+.woocommerce a.button.alt.disabled,
+.woocommerce a.button.alt.disabled:hover,
+.woocommerce a.button.alt:disabled,
+.woocommerce a.button.alt:disabled:hover,
+.woocommerce a.button.alt:disabled[disabled],
+.woocommerce a.button.alt:disabled[disabled]:hover,
+.woocommerce button.button.alt.disabled,
+.woocommerce button.button.alt.disabled:hover,
+.woocommerce button.button.alt:disabled,
+.woocommerce button.button.alt:disabled:hover,
+.woocommerce button.button.alt:disabled[disabled],
+.woocommerce button.button.alt:disabled[disabled]:hover,
+.woocommerce input.button.alt.disabled,
+.woocommerce input.button.alt.disabled:hover,
+.woocommerce input.button.alt:disabled,
+.woocommerce input.button.alt:disabled:hover,
+.woocommerce input.button.alt:disabled[disabled],
+.woocommerce input.button.alt:disabled[disabled]:hover,
+.woocommerce div.product form.cart .button {
+	color: #1e2031;
+}
+
+@media (min-width: 993px) {
+	.knsl-btn,
+	.knsl-btn:focus,
+	.button,
+	.button:focus,
+	input[type="submit"],
+	input#submit {
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 993px) {
+	.knsl-btn,
+	.knsl-btn:focus,
+	.button,
+	.button:focus,
+	input[type="submit"],
+	input#submit {
+		letter-spacing: 0px;
+	}
+}
+
+.knsl-btn,
+.knsl-btn:focus,
+.button,
+.button:focus,
+input[type="submit"],
+input#submit,
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce div.product form.cart .button {
+	border-radius: 0px;
+}
+
+.knsl-btn,
+.knsl-btn:focus,
+.button,
+.button:focus,
+input[type="submit"],
+input#submit,
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce div.product form.cart .button {
+	height: 70px;
+}
+
+.knsl-btn,
+.knsl-btn:focus,
+.button,
+.button:focus,
+input[type="submit"],
+input#submit,
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce div.product form.cart .button {
+	text-transform: uppercase;
+}

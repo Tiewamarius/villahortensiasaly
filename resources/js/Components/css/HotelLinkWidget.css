@@ -1,0 +1,76 @@
+ @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Playfair+Display:wght@500&display=swap');
+
+:root {
+    --gold: #f3456b;
+    --gold-dark: #f3456b;
+    --ink: #1c1c1c;
+    --header-h: 90px; /* hauteur de votre Header fixe ; mettre 0 s'il n'est pas fixe */
+    --page-pad: clamp(20px, 7vw, 100px);
+}
+
+.booking-page { font-family: 'Barlow', system-ui, sans-serif; color: var(--ink); background: #fff; }
+
+/* ---------- Hero ---------- */
+.booking-hero {
+    position: relative;
+    min-height: 300px;
+    padding: calc(var(--header-h) + 8px) var(--page-pad) 32px;
+    color: #fff;
+    background:
+        /* linear-gradient(rgba(10, 10, 10, 0.55), rgba(10, 10, 10, 0.7)), */
+        url('/img/BANNIERE/Bannière 3.jpg') center / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.booking-hero__eyebrow {
+    margin: 0 0 12px; color: var(--gold); font-weight: 500;
+    font-size: 14px; letter-spacing: 0.16em; text-transform: uppercase;
+}
+.booking-hero h1 {
+    margin: 0 0 14px; font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 500; font-size: clamp(36px, 5vw, 56px); line-height: 1.05;
+}
+.booking-hero__sub { margin: 0 0 22px; max-width: 60ch; color: rgba(255, 255, 255, 0.72); font-size: 16px; }
+
+.booking-trust { display: flex; flex-wrap: wrap; gap: 8px 28px; margin: 0; padding: 0; list-style: none; font-size: 13.5px; color: rgba(255, 255, 255, 0.7); }
+.booking-trust li { display: flex; align-items: center; gap: 8px; }
+.booking-trust svg { color: var(--gold); }
+
+/* ---------- Conteneur du widget (juste sous le hero, sans chevauchement) ---------- */
+.hotel-link-widget-container {
+    max-width: 1100px;
+    margin: 44px auto 60px;
+    padding: 0 20px;
+}
+
+.ng-scope{
+ border-radius: 10px;
+}
+
+.hbe-bws,
+.hbe-bws * { font-family: 'Barlow', system-ui, sans-serif; }
+
+.hbe-bws button.btn-primary,
+.hbe-bws .search-button,
+.hbe-bws button[type='submit'] {
+    background-color: var(--gold) !important;
+    border-color: var(--gold) !important;
+    color: #fff !important;
+    font-weight: 600;
+    border-radius: 6px;
+}
+.hbe-bws button.btn-primary:hover,
+.hbe-bws .search-button:hover,
+.hbe-bws button[type='submit']:hover { background-color: var(--gold-dark) !important; }
+
+.hbe-bws input:focus-visible,
+.hbe-bws select:focus-visible,
+.hbe-bws button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+/* ---------- Barre de dates fixée au défilement (voir useStickySearchBar) ---------- */
+.hbe-bws .is-stuck {
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}

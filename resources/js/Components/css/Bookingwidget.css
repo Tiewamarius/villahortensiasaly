@@ -1,0 +1,1361 @@
+/* =========================================================
+   BOOKING WIDGET
+   Résidence Néhémie
+========================================================= */
+
+
+/* =========================================================
+   1. CONTENEUR PRINCIPAL
+========================================================= */
+
+.booking-widget {
+    width: min(1040px, 100%);
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+}
+
+
+/* =========================================================
+   2. CONTENEURS INTERNES SECUREBOOKINGS
+========================================================= */
+
+.booking-widget .hbe-bws,
+.booking-widget #search-widget-panel,
+.booking-widget #searchWidgetForm {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+
+/* Box sizing */
+
+.booking-widget .hbe-bws *,
+.booking-widget .hbe-bws *::before,
+.booking-widget .hbe-bws *::after {
+    box-sizing: border-box;
+}
+
+
+/* Police */
+
+.booking-widget
+    .hbe-bws
+    *:not([class*="bws-icon"]) {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif !important;
+}
+
+
+/* =========================================================
+   3. BARRE PRINCIPALE
+========================================================= */
+
+.booking-widget #searchWidgetForm > div {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    gap: 12px;
+
+    padding: 7px 7px 7px 25px !important;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.75) !important;
+
+    border-radius: 15px !important;
+
+    background: rgba(255, 255, 255, 0.98) !important;
+
+    box-shadow:
+        0 12px 35px
+        rgba(0, 0, 0, 0.12) !important;
+
+    overflow: visible !important;
+}
+
+
+/* Neutralisation du clearfix SecureBookings */
+
+.booking-widget #searchWidgetForm > div::before,
+.booking-widget
+    #searchWidgetForm
+    > div::after {
+    display: none !important;
+    content: none !important;
+}
+
+
+/* =========================================================
+   4. COLONNES
+========================================================= */
+
+.booking-widget .bws-swp-col {
+    float: none !important;
+
+    width: auto !important;
+
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* =========================================================
+   5. ARRIVÉE / DÉPART
+========================================================= */
+
+.booking-widget .swp-col1,
+.booking-widget .swp-col2 {
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    align-items: center;
+
+    flex: 1 1 0 !important;
+
+    width: auto !important;
+
+    min-width: 0 !important;
+
+    gap: 10px;
+}
+
+
+.booking-widget .swp-col1 > *,
+.booking-widget .swp-col2 > * {
+    min-width: 0 !important;
+}
+
+
+/* =========================================================
+   6. LABELS
+========================================================= */
+
+.booking-widget .swp-col1::before,
+.booking-widget .swp-col2::before {
+    display: block;
+
+    flex: 0 0 auto;
+
+    color: #747a9c;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    letter-spacing: 0.2px;
+
+    white-space: nowrap;
+}
+
+
+.booking-widget .swp-col1::before {
+    content: "Arrivée";
+}
+
+.booking-widget .swp-col2::before {
+    content: "Départ";
+}
+
+
+html[lang^="en"]
+    .booking-widget
+    .swp-col1::before {
+    content: "Check-in";
+}
+
+
+html[lang^="en"]
+    .booking-widget
+    .swp-col2::before {
+    content: "Check-out";
+}
+
+
+/* =========================================================
+   7. CHAMP DATE
+========================================================= */
+
+.booking-widget .bws-ipt-calendar {
+    position: relative;
+
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    align-items: center;
+
+    flex: 1 1 0 !important;
+
+    width: 100% !important;
+
+    min-width: 0 !important;
+
+    height: 46px;
+
+    margin: 0 !important;
+
+    padding: 0 12px !important;
+
+    border: 0 !important;
+
+    border-radius: 11px !important;
+
+    background: #e8f5f6 !important;
+
+    overflow: hidden !important;
+
+    transition:
+        background-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.booking-widget .bws-ipt-calendar:hover {
+    background: #dceff1 !important;
+}
+
+
+.booking-widget
+    .bws-ipt-calendar:focus-within {
+    background: #dceff1 !important;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(91, 162, 243, 0.15) !important;
+}
+
+
+/* =========================================================
+   8. DATE AFFICHÉE
+========================================================= */
+
+.booking-widget .show-date {
+    display: flex !important;
+
+    align-items: center;
+
+    flex: 1 1 0 !important;
+
+    width: 100% !important;
+
+    min-width: 0 !important;
+
+    height: auto !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    border: 0 !important;
+
+    background: transparent !important;
+
+    color: #747a9c !important;
+
+    font-size: 13px !important;
+
+    font-weight: 500 !important;
+
+    line-height: 1.2 !important;
+
+    white-space: nowrap;
+
+    overflow: hidden !important;
+
+    text-overflow: ellipsis;
+
+    cursor: pointer;
+}
+
+
+.booking-widget .picker-date {
+    color: #4a5075 !important;
+
+    font-weight: 600 !important;
+}
+
+
+.booking-widget .picker-weekday {
+    color: #747a9c !important;
+
+    font-weight: 400 !important;
+}
+
+
+/* =========================================================
+   9. ICÔNE CALENDRIER
+========================================================= */
+
+.booking-widget .bws-icon-calendar {
+    position: static !important;
+
+    display: block !important;
+
+    flex: 0 0 auto !important;
+
+    width: 16px !important;
+
+    height: 16px !important;
+
+    margin: 0 0 0 8px !important;
+
+    padding: 0 !important;
+
+    opacity: 0.7;
+
+    font-size: 0 !important;
+
+    background:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23747a9c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2'/%3E%3Cpath d='M16 2v4M8 2v4M3 10h18'/%3E%3C/svg%3E")
+        center / contain no-repeat !important;
+}
+
+
+.booking-widget
+    .bws-icon-calendar::before,
+.booking-widget
+    .bws-icon-calendar::after {
+    content: none !important;
+}
+
+
+/* =========================================================
+   10. CODE PROMO
+========================================================= */
+
+/*
+   Important :
+   .swp-col5 reste visible sur tous les écrans.
+*/
+
+.booking-widget .swp-col5 {
+    display: flex !important;
+
+    align-items: center;
+
+    flex: 0 1 170px !important;
+
+    width: 170px !important;
+
+    min-width: 0 !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+}
+
+
+/*
+   Champ généré par SecureBookings
+*/
+
+.booking-widget .swp-col5 input,
+.booking-widget #hbe_promo_code,
+.booking-widget .rn-promo-input {
+    display: block !important;
+
+    width: 100% !important;
+
+    min-width: 0 !important;
+
+    height: 2.5rem !important;
+
+    margin: 0 !important;
+
+    padding: 0 14px !important;
+
+    border: 1px solid
+        rgba(22, 135, 126, 0.08) !important;
+
+    border-radius: 11px !important;
+
+    background: #d76b8917 !important;
+
+    color: #4a5075 !important;
+
+    font-size: 13px !important;
+
+    font-weight: 600 !important;
+
+    line-height: 46px !important;
+
+    outline: none !important;
+
+    box-shadow: none !important;
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/*
+   Placeholder
+*/
+
+.booking-widget
+    .swp-col5
+    input::placeholder,
+.booking-widget
+    #hbe_promo_code::placeholder {
+    color: #747a9c !important;
+
+    font-weight: 400 !important;
+
+    opacity: 1 !important;
+}
+
+
+/*
+   Hover
+*/
+
+.booking-widget
+    .swp-col5
+    input:hover,
+.booking-widget
+    #hbe_promo_code:hover {
+    background: #dceff1 !important;
+
+    border-color:
+        rgba(22, 135, 126, 0.18) !important;
+}
+
+
+/*
+   Focus
+*/
+
+.booking-widget
+    .swp-col5
+    input:focus,
+.booking-widget
+    #hbe_promo_code:focus {
+    background: #dceff1 !important;
+
+    border-color: #f3456b !important;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(91, 162, 243, 0.18) !important;
+}
+
+
+/* =========================================================
+   11. BOUTON + GARANTIE
+========================================================= */
+
+.booking-widget .swp-col3 {
+    flex: 0 0 auto !important;
+
+    width: auto !important;
+
+    min-width: 0 !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+}
+
+
+.booking-widget
+    .swp-col3
+    .contain-box {
+    display: flex !important;
+
+    align-items: center;
+
+    gap: 12px;
+
+    float: none !important;
+
+    width: auto !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+}
+
+
+.booking-widget .swp-col3 .btn-box {
+    float: none !important;
+
+    width: auto !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+}
+
+
+/* =========================================================
+   12. BOUTON RECHERCHE
+========================================================= */
+
+.booking-widget .bws-button {
+    display: flex !important;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 0 0 auto !important;
+
+    width: 41px !important;
+
+    height: 41px !important;
+
+    min-width: 41px !important;
+
+    min-height: 41px !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    border: 0 !important;
+
+    border-radius: 50% !important;
+
+    background-color: #f3456b !important;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='10.8' cy='10.8' r='6.8'/%3E%3Cpath d='M16 16L21 21'/%3E%3C/svg%3E") !important;
+
+    background-position: center !important;
+
+    background-repeat: no-repeat !important;
+
+    background-size: 21px !important;
+
+    box-shadow: none !important;
+
+    font-size: 0 !important;
+
+    line-height: 0 !important;
+
+    color: transparent !important;
+
+    text-decoration: none !important;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s ease,
+        transform 0.2s ease;
+}
+
+
+.booking-widget .bws-button:hover {
+    background-color: #f3456b !important;
+
+    transform: scale(1.05);
+}
+
+
+.booking-widget .bws-button:active {
+    transform: scale(0.98);
+}
+
+
+/*
+   Texte Search conservé pour accessibilité
+*/
+
+.booking-widget .bws-button span {
+    position: absolute !important;
+
+    width: 1px !important;
+
+    height: 1px !important;
+
+    padding: 0 !important;
+
+    margin: -1px !important;
+
+    overflow: hidden !important;
+
+    clip: rect(0, 0, 0, 0) !important;
+
+    white-space: nowrap !important;
+
+    border: 0 !important;
+}
+
+
+/* =========================================================
+   13. GARANTIE MEILLEUR PRIX
+========================================================= */
+
+.booking-widget .best-price-guarantee {
+    float: none !important;
+
+    width: auto !important;
+
+    min-width: 0;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+}
+
+
+.booking-widget
+    .best-price-guarantee
+    .guarantee {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.booking-widget
+    .best-price-guarantee
+    .txt {
+    max-width: 96px;
+
+    color: #4a5075;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+
+.booking-widget
+    .best-price-guarantee
+    .bws-ico {
+    display: inline-flex;
+
+    cursor: help;
+}
+
+
+/* Icône check */
+
+.booking-widget
+    .best-price-guarantee
+    .bws-icon-check-circle {
+    display: block !important;
+
+    width: 18px !important;
+
+    height: 18px !important;
+
+    font-size: 0 !important;
+
+    background:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2316a34a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M8 12.5l2.7 2.7L16 9.5'/%3E%3C/svg%3E")
+        center / contain no-repeat !important;
+}
+
+
+.booking-widget
+    .best-price-guarantee
+    .bws-icon-check-circle::before,
+.booking-widget
+    .best-price-guarantee
+    .bws-icon-check-circle::after {
+    content: none !important;
+}
+
+
+/* =========================================================
+   14. INFOBULLE
+========================================================= */
+
+.qtip {
+    max-width: 280px !important;
+
+    border: 0 !important;
+
+    border-radius: 12px !important;
+
+    background: #1f2340 !important;
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.25) !important;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+.qtip .qtip-content {
+    padding: 12px 14px !important;
+
+    color: #fff !important;
+
+    font-size: 12.5px !important;
+
+    line-height: 1.55 !important;
+}
+
+
+.qtip .qtip-content a {
+    color: #f3456b98 !important;
+}
+
+
+.qtip .qtip-tip {
+    display: none !important;
+}
+
+
+/* =========================================================
+   15. ACCESSIBILITÉ
+========================================================= */
+
+.booking-widget .bws-button:focus-visible,
+.booking-widget .show-date:focus-visible,
+.booking-widget #hbe_promo_code:focus-visible {
+    outline: 2px solid #f3456b !important;
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   16. TABLETTE
+   ≤ 991px
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .booking-widget #searchWidgetForm > div {
+        gap: clamp(6px, 1.5vw, 10px);
+
+        padding:
+            clamp(7px, 1.2vw, 10px)
+            clamp(7px, 1.2vw, 10px)
+            clamp(7px, 1.2vw, 10px)
+            clamp(14px, 3vw, 24px) !important;
+    }
+
+
+    .booking-widget .swp-col1,
+    .booking-widget .swp-col2 {
+        gap: clamp(5px, 1vw, 9px);
+    }
+
+
+    .booking-widget .swp-col1::before,
+    .booking-widget .swp-col2::before {
+        font-size:
+            clamp(10px, 1.3vw, 12px);
+    }
+
+
+    .booking-widget .bws-ipt-calendar {
+        height:
+            clamp(40px, 5vw, 46px);
+
+        padding:
+            0
+            clamp(7px, 1.3vw, 12px) !important;
+
+        border-radius:
+            clamp(8px, 1.3vw, 11px) !important;
+    }
+
+
+    .booking-widget .show-date {
+        font-size:
+            clamp(10px, 1.25vw, 13px) !important;
+    }
+
+
+    .booking-widget .bws-icon-calendar {
+        width:
+            clamp(13px, 1.6vw, 16px) !important;
+
+        height:
+            clamp(13px, 1.6vw, 16px) !important;
+
+        margin-left:
+            clamp(3px, 0.8vw, 8px) !important;
+    }
+
+
+    /*
+     * Code promo tablette
+     */
+    .booking-widget .swp-col5 {
+        flex: 0 1 clamp(105px, 15vw, 150px) !important;
+
+        width:
+            clamp(105px, 15vw, 150px) !important;
+    }
+
+
+    .booking-widget
+        .swp-col5
+        input,
+    .booking-widget
+        #hbe_promo_code {
+        height:
+            clamp(40px, 5vw, 46px) !important;
+
+        padding:
+            0
+            clamp(8px, 1.3vw, 12px) !important;
+
+        font-size:
+            clamp(10px, 1.3vw, 13px) !important;
+    }
+
+
+    .booking-widget
+        .swp-col3
+        .contain-box {
+        gap:
+            clamp(6px, 1vw, 10px);
+    }
+
+
+    /*
+     * Sur tablette, on garde l'icône de garantie
+     * mais on retire son texte.
+     */
+    .booking-widget
+        .best-price-guarantee
+        .txt {
+        display: none;
+    }
+
+
+    .booking-widget .bws-button {
+        width:
+            clamp(40px, 5.5vw, 51px) !important;
+
+        height:
+            clamp(40px, 5.5vw, 51px) !important;
+
+        min-width:
+            clamp(40px, 5.5vw, 51px) !important;
+
+        min-height:
+            clamp(40px, 5.5vw, 51px) !important;
+
+        background-size:
+            clamp(16px, 2.2vw, 21px) !important;
+    }
+}
+
+
+/* =========================================================
+   17. MOBILE
+   ≤ 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .booking-widget {
+        width: 100%;
+    }
+
+
+    .booking-widget #searchWidgetForm > div {
+        gap:
+            clamp(3px, 1vw, 6px);
+
+        padding:
+            6px
+            6px
+            6px
+            clamp(8px, 2.5vw, 14px) !important;
+
+        border-radius: 999px !important;
+    }
+
+
+    .booking-widget .swp-col1,
+    .booking-widget .swp-col2 {
+        gap:
+            clamp(3px, 0.8vw, 6px);
+    }
+
+
+    .booking-widget .swp-col1::before,
+    .booking-widget .swp-col2::before {
+        font-size:
+            clamp(8px, 2vw, 10px);
+
+        letter-spacing: 0;
+    }
+
+
+    .booking-widget .bws-ipt-calendar {
+        height:
+            clamp(35px, 8vw, 42px);
+
+        padding:
+            0
+            clamp(5px, 1.5vw, 8px) !important;
+
+        border-radius:
+            clamp(7px, 2vw, 10px) !important;
+    }
+
+
+    .booking-widget .show-date {
+        font-size:
+            clamp(8px, 1.9vw, 11px) !important;
+
+        line-height: 1.1 !important;
+    }
+
+
+    .booking-widget .bws-icon-calendar {
+        width:
+            clamp(10px, 2.8vw, 14px) !important;
+
+        height:
+            clamp(10px, 2.8vw, 14px) !important;
+
+        margin-left:
+            clamp(2px, 0.8vw, 4px) !important;
+    }
+
+
+    /*
+     * Code promo mobile :
+     * il reste visible.
+     */
+    .booking-widget .swp-col5 {
+        flex:
+            0 1 clamp(70px, 20vw, 110px) !important;
+
+        width:
+            clamp(70px, 20vw, 110px) !important;
+    }
+
+
+    .booking-widget
+        .swp-col5
+        input,
+    .booking-widget
+        #hbe_promo_code {
+        height:
+            clamp(35px, 8vw, 42px) !important;
+
+        padding:
+            0
+            clamp(6px, 1.8vw, 10px) !important;
+
+        border-radius:
+            clamp(7px, 2vw, 10px) !important;
+
+        font-size:
+            clamp(8px, 2vw, 11px) !important;
+
+        line-height:
+            clamp(35px, 8vw, 42px) !important;
+    }
+
+
+    .booking-widget
+        .swp-col5
+        input::placeholder,
+    .booking-widget
+        #hbe_promo_code::placeholder {
+        font-size:
+            clamp(8px, 2vw, 11px) !important;
+    }
+
+
+    .booking-widget .bws-button {
+        width:
+            clamp(35px, 9vw, 42px) !important;
+
+        height:
+            clamp(35px, 9vw, 42px) !important;
+
+        min-width:
+            clamp(35px, 9vw, 42px) !important;
+
+        min-height:
+            clamp(35px, 9vw, 42px) !important;
+
+        background-size:
+            clamp(14px, 3.8vw, 18px) !important;
+    }
+}
+
+
+/* =========================================================
+   18. PETITS MOBILES
+   ≤ 560px
+========================================================= */
+
+/*
+ * IMPORTANT :
+ *
+ * On NE MASQUE PLUS .swp-col5.
+ *
+ * Le champ Code promo reste donc visible.
+ *
+ * Seule la garantie est masquée.
+ */
+
+@media (max-width: 560px) {
+
+    .booking-widget
+        .best-price-guarantee {
+        display: none !important;
+    }
+
+
+    .booking-widget #searchWidgetForm > div {
+        gap: 3px;
+
+        padding:
+            5px
+            5px
+            5px
+            8px !important;
+    }
+
+
+    .booking-widget .swp-col1,
+    .booking-widget .swp-col2 {
+        gap: 3px;
+    }
+
+
+    .booking-widget .swp-col1::before,
+    .booking-widget .swp-col2::before {
+        font-size: 8px;
+    }
+
+
+    .booking-widget .bws-ipt-calendar {
+        height: 34px;
+
+        padding: 0 5px !important;
+
+        border-radius: 7px !important;
+    }
+
+
+    .booking-widget .show-date {
+        font-size: 8px !important;
+    }
+
+
+    .booking-widget .picker-weekday {
+        display: none !important;
+    }
+
+
+    .booking-widget .bws-icon-calendar {
+        width: 10px !important;
+
+        height: 10px !important;
+
+        flex-basis: 10px;
+
+        margin-left: 2px !important;
+    }
+
+
+    /*
+     * Code promo :
+     * suffisamment compact pour rester visible.
+     */
+    .booking-widget .swp-col5 {
+        flex:
+            0 1 clamp(65px, 19vw, 95px) !important;
+
+        width:
+            clamp(65px, 19vw, 95px) !important;
+    }
+
+
+    .booking-widget
+        .swp-col5
+        input,
+    .booking-widget
+        #hbe_promo_code {
+        height: 34px !important;
+
+        padding: 0 7px !important;
+
+        border-radius: 7px !important;
+
+        font-size: 8px !important;
+
+        line-height: 34px !important;
+    }
+
+
+    .booking-widget
+        .swp-col5
+        input::placeholder,
+    .booking-widget
+        #hbe_promo_code::placeholder {
+        font-size: 8px !important;
+    }
+
+
+    .booking-widget .bws-button {
+        width: 34px !important;
+
+        height: 34px !important;
+
+        min-width: 34px !important;
+
+        min-height: 34px !important;
+
+        background-size: 14px !important;
+    }
+}
+
+
+/* =========================================================
+   19. TRÈS PETITS ÉCRANS
+   ≤ 380px
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .booking-widget #searchWidgetForm > div {
+        gap: 2px;
+
+        padding:
+            4px
+            4px
+            4px
+            6px !important;
+    }
+
+
+    .booking-widget .swp-col1,
+    .booking-widget .swp-col2 {
+        gap: 2px;
+    }
+
+
+    .booking-widget .swp-col1::before,
+    .booking-widget .swp-col2::before {
+        font-size: 7px;
+    }
+
+
+    .booking-widget .bws-ipt-calendar {
+        height: 31px;
+
+        padding: 0 4px !important;
+    }
+
+
+    .booking-widget .show-date {
+        font-size: 7px !important;
+    }
+
+
+    .booking-widget .bws-icon-calendar {
+        width: 9px !important;
+
+        height: 9px !important;
+
+        flex-basis: 9px;
+
+        margin-left: 1px !important;
+    }
+
+
+    /*
+     * Promo encore plus compact.
+     */
+    .booking-widget .swp-col5 {
+        flex:
+            0 1 62px !important;
+
+        width: 62px !important;
+    }
+
+
+    .booking-widget
+        .swp-col5
+        input,
+    .booking-widget
+        #hbe_promo_code {
+        height: 31px !important;
+
+        padding: 0 5px !important;
+
+        font-size: 7px !important;
+
+        line-height: 31px !important;
+
+        border-radius: 6px !important;
+    }
+
+
+    .booking-widget
+        .swp-col5
+        input::placeholder,
+    .booking-widget
+        #hbe_promo_code::placeholder {
+        font-size: 7px !important;
+    }
+
+
+    .booking-widget .bws-button {
+        width: 31px !important;
+
+        height: 31px !important;
+
+        min-width: 31px !important;
+
+        min-height: 31px !important;
+
+        background-size: 13px !important;
+    }
+}
+
+
+/* =========================================================
+   20. ÉCRANS EXTRÊMEMENT ÉTROITS
+   ≤ 330px
+========================================================= */
+
+@media (max-width: 330px) {
+
+    .booking-widget #searchWidgetForm > div {
+        gap: 2px;
+
+        padding:
+            4px
+            4px
+            4px
+            5px !important;
+    }
+
+
+    .booking-widget .swp-col1,
+    .booking-widget .swp-col2 {
+        gap: 2px;
+    }
+
+
+    .booking-widget .swp-col1::before,
+    .booking-widget .swp-col2::before {
+        font-size: 6px;
+    }
+
+
+    .booking-widget .bws-ipt-calendar {
+        height: 30px;
+
+        padding: 0 3px !important;
+    }
+
+
+    .booking-widget .show-date {
+        font-size: 6.5px !important;
+    }
+
+
+    .booking-widget .bws-icon-calendar {
+        width: 8px !important;
+
+        height: 8px !important;
+
+        flex-basis: 8px;
+
+        margin-left: 1px !important;
+    }
+
+
+    /*
+     * Champ promo minimal mais toujours visible.
+     */
+    .booking-widget .swp-col5 {
+        flex:
+            0 1 56px !important;
+
+        width: 56px !important;
+    }
+
+
+    .booking-widget
+        .swp-col5
+        input,
+    .booking-widget
+        #hbe_promo_code {
+        height: 30px !important;
+
+        padding: 0 4px !important;
+
+        font-size: 6.5px !important;
+
+        line-height: 30px !important;
+
+        border-radius: 6px !important;
+    }
+
+
+    .booking-widget
+        .swp-col5
+        input::placeholder,
+    .booking-widget
+        #hbe_promo_code::placeholder {
+        font-size: 6.5px !important;
+    }
+
+
+    .booking-widget .bws-button {
+        width: 30px !important;
+
+        height: 30px !important;
+
+        min-width: 30px !important;
+
+        min-height: 30px !important;
+
+        background-size: 12px !important;
+    }
+}
+
+
+/* =========================================================
+   21. RÉDUCTION DES ANIMATIONS
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .booking-widget .bws-button,
+    .booking-widget .bws-ipt-calendar,
+    .booking-widget .swp-col5 input {
+        transition: none !important;
+    }
+}

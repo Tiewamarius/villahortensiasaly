@@ -1,0 +1,731 @@
+/* =====================================================
+   APPART SECTION — LIGHT LUXURY DESIGN
+   Trois modes d'affichage des cartes :
+   - ≥ 1101px avec souris : 3 colonnes, détails au survol
+   - 601 – 1100px         : 2 colonnes, détails toujours visibles
+   - ≤ 600px              : 1 colonne, détails toujours visibles
+===================================================== */
+
+.appart-section,
+.appart-section *,
+.appart-section *::before,
+.appart-section *::after {
+    box-sizing: border-box;
+}
+
+.appart-section {
+    --appart-bg: #e7e9e940;
+    --appart-white: #ffffff;
+    --appart-dark: #0f0e0e;
+    --appart-text: #dd2f56;
+    --appart-muted: #718b87;
+    --appart-primary: #e66a85;
+    --appart-primary-dark: #dd2f56;
+    --appart-gold: #fc1447;
+    --appart-border: rgba(18, 59, 56, 0.10);
+
+    position: relative;
+    width: 100%;
+    /* padding: 115px 0 105px; */
+    overflow: hidden;
+
+    background: var(--appart-bg);
+    color: var(--appart-dark);
+    font-family: inherit;
+}
+
+.appart-container {
+    width: min(1380px, 100% - 100px);
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.appart-header {
+    max-width: 800px;
+    margin-bottom: 65px;
+    animation: appartFadeUp 0.8s ease both;
+}
+
+.appart-subtitle {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+
+    margin-bottom: 24px;
+
+    color: var(--appart-primary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.appart-subtitle::before {
+    content: "";
+
+    width: 35px;
+    height: 1px;
+
+    background: var(--appart-gold);
+}
+
+.appart-title {
+    margin: 0;
+
+    color: var(--appart-dark);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(35px, 5vw, 16px);
+    font-weight: 15x;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+}
+
+.appart-title span {
+    color: var(--appart-primary);
+    font-style: italic;
+    font-weight: 300;
+}
+
+.appart-lead {
+    max-width: 600px;
+    margin: 25px 0 0;
+
+    color: var(--appart-muted);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   GRILLE
+===================================================== */
+
+.appart-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+
+/* =====================================================
+   CARTE
+   Les blocs du haut et du bas sont dans le flux : la carte
+   grandit si le contenu est plus haut que prévu.
+===================================================== */
+
+.appart-card {
+    position: relative;
+    isolation: isolate;
+
+    /* Permet d'adapter le contenu à la largeur de la carte */
+    container-type: inline-size;
+    container-name: appart;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-width: 0;
+    min-height: 470px;
+    overflow: hidden;
+
+    background: #dcece8;
+    border-radius: 5px;
+
+    box-shadow: 0 12px 35px rgba(20, 73, 67, 0.07);
+
+    /* "backwards" : sinon l'animation bloque le transform du survol */
+    animation: appartFadeUp 0.8s ease backwards;
+    animation-delay: calc(var(--card-index) * 120ms);
+
+    transition:
+        box-shadow 0.45s ease,
+        transform 0.45s ease;
+}
+
+.appart-card:hover {
+    box-shadow: 0 25px 55px rgba(20, 73, 67, 0.17);
+    transform: translateY(-4px);
+}
+
+/* Image de fond */
+
+.appart-card-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+
+    background-size: cover;
+    background-position: center;
+
+    transform: scale(1);
+
+    transition: transform 1s cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+
+.appart-card:hover .appart-card-bg {
+    transform: scale(1.08);
+}
+
+/* Voile : assez sombre pour lire les détails affichés en permanence */
+
+.appart-card-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background: linear-gradient(
+        180deg,
+        rgba(9, 32, 29, 0.30) 0%,
+        rgba(9, 32, 29, 0.10) 20%,
+        rgba(9, 32, 29, 0.62) 55%,
+        rgba(9, 32, 29, 0.95) 100%
+    );
+
+    transition: background 0.5s ease;
+}
+
+
+/* =====================================================
+   HAUT DE CARTE : quartier + prix
+===================================================== */
+
+.appart-card-top {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 22px 22px 0;
+}
+
+/* .appart-tag {
+    padding: 9px 11px;
+
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 2px;
+
+    background: rgba(255, 255, 255, 0.16);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+} */
+
+.appart-price {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+
+    margin-left: auto;
+    padding: 10px 12px;
+
+    background: rgba(255, 255, 255, 0.08);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    border-radius: 3px;
+
+    color: var(--appart-dark);
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.appart-price strong {
+    color: white;
+    /* color: var(--appart-primary-dark); */
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.appart-price small {
+    color: var(--appart-muted);
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   CONTENU
+===================================================== */
+
+.appart-card-content {
+    position: relative;
+
+    /* Le haut sépare le contenu du bloc quartier / prix */
+    padding: 48px 25px 25px;
+}
+
+.appart-category {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #e4cda2;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.appart-card-heading h3 {
+    margin: 0 0 10px;
+
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    font-size: clamp(25px, 8cqi, 36px);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+}
+
+.appart-address {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.appart-pin {
+    flex: 0 0 auto;
+    width: 16px;
+    height: 16px;
+    margin-top: 1px;
+
+    color: #c9b184;
+}
+
+
+/* =====================================================
+   DÉTAILS (toujours visibles par défaut)
+===================================================== */
+
+.appart-hover-content {
+    display: grid;
+    grid-template-rows: 1fr;
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease,
+        grid-template-rows 0.45s ease;
+}
+
+.appart-hover-inner {
+    min-height: 0;
+}
+
+.appart-features {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+
+    margin: 19px 0 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.appart-feature {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: rgba(255, 255, 255, 0.94);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.appart-check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+
+    width: 16px;
+    height: 16px;
+
+    border: 1px solid #c9b184;
+    border-radius: 50%;
+
+    color: #e4cda2;
+}
+
+.appart-check svg {
+    width: 9px;
+    height: 9px;
+}
+
+.appart-description {
+    max-width: 470px;
+    margin: 16px 0 19px;
+
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   BOUTONS
+===================================================== */
+
+.appart-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.appart-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    min-height: 44px;
+    padding: 0 16px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.appart-btn:hover {
+    transform: translateY(-2px);
+}
+
+.appart-btn:focus-visible,
+.appart-discover-link:focus-visible {
+    outline: 2px solid #e4cda2;
+    outline-offset: 3px;
+}
+
+.appart-btn-primary {
+    background: #e7e9e940;
+    border: 1px solid #e7e9e940;
+    color: var(--appart-primary-dark);
+}
+
+.appart-btn-primary:hover {
+    background: var(--appart-primary);
+    border-color: var(--appart-primary);
+    color: #fff;
+}
+
+.appart-btn-ghost {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    color: #fff;
+}
+
+.appart-btn-ghost:hover {
+    background: #fff;
+    border-color: #fff;
+    color: var(--appart-primary-dark);
+}
+
+
+/* =====================================================
+   ADAPTATION À LA LARGEUR DE LA CARTE
+===================================================== */
+
+/* Carte étroite : on retire « À partir de » pour que le prix reste sur la ligne */
+
+@container appart (max-width: 400px) {
+
+    /* .appart-price-from {
+        display: none;
+    } */
+
+    .appart-btn {
+        flex: 1 1 0;
+        padding: 0 10px;
+    }
+}
+
+
+/* =====================================================
+   CTA DU BAS
+===================================================== */
+
+.appart-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px 20px;
+
+    margin-top: 45px;
+    padding-top: 24px;
+
+    border-top: 1px solid var(--appart-border);
+}
+
+.appart-bottom p {
+    margin: 0;
+
+    color: var(--appart-muted);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.appart-discover-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+
+    color: var(--appart-primary-dark);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    text-decoration: none;
+
+    transition: gap 0.3s ease;
+}
+
+.appart-discover-link:hover {
+    gap: 22px;
+}
+
+.appart-discover-link span {
+    color: var(--appart-gold);
+}
+
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+@keyframes appartFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   DESKTOP AVEC SOURIS (≥ 1101px) : détails au survol
+   Hauteur fixe pour que la carte ne saute pas au survol.
+===================================================== */
+
+@media (hover: hover) and (min-width: 1101px) {
+
+    .appart-card {
+        height: 510px;
+        min-height: 0;
+    }
+
+    .appart-card-overlay {
+        background: linear-gradient(
+            180deg,
+            rgba(9, 32, 29, 0.25) 0%,
+            rgba(9, 32, 29, 0.02) 30%,
+            rgba(9, 32, 29, 0.22) 48%,
+            rgba(9, 32, 29, 0.88) 100%
+        );
+    }
+
+    .appart-card:hover .appart-card-overlay,
+    .appart-card:focus-within .appart-card-overlay {
+        background: linear-gradient(
+            180deg,
+            rgba(9, 32, 29, 0.30) 0%,
+            rgba(9, 32, 29, 0.08) 20%,
+            rgba(9, 32, 29, 0.62) 55%,
+            rgba(9, 32, 29, 0.95) 100%
+        );
+    }
+
+    .appart-hover-content {
+        grid-template-rows: 0fr;
+
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    .appart-hover-inner {
+        overflow: hidden;
+    }
+
+    .appart-card:hover .appart-hover-content,
+    .appart-card:focus-within .appart-hover-content {
+        grid-template-rows: 1fr;
+
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   TABLETTE (≤ 1100px) : 2 colonnes
+   La 3e carte occupe toute la largeur.
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .appart-section {
+        padding: 90px 0;
+    }
+
+    .appart-container {
+        width: min(1380px, 100% - 60px);
+    }
+
+    .appart-header {
+        margin-bottom: 50px;
+    }
+
+    .appart-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .appart-card:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+    }
+
+    .appart-card:last-child:nth-child(odd) .appart-card-content {
+        max-width: 640px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE (≤ 600px) : 1 colonne
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .appart-section {
+        padding: 75px 0 65px;
+    }
+
+    .appart-container {
+        width: calc(100% - 36px);
+    }
+
+    .appart-header {
+        margin-bottom: 38px;
+    }
+
+    .appart-subtitle {
+        margin-bottom: 20px;
+        font-size: 10px;
+        letter-spacing: 2.5px;
+    }
+
+    .appart-lead {
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .appart-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .appart-card {
+        min-height: 480px;
+    }
+
+    .appart-card-top {
+        padding: 18px 18px 0;
+    }
+
+    .appart-card-content {
+        padding: 40px 20px 22px;
+    }
+
+    .appart-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-top: 35px;
+    }
+}
+
+
+/* =====================================================
+   ACCESSIBILITÉ : réduction des animations
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .appart-card,
+    .appart-header {
+        animation: none;
+    }
+
+    .appart-card,
+    .appart-card-bg,
+    .appart-hover-content,
+    .appart-btn {
+        transition: none;
+    }
+
+    .appart-card:hover,
+    .appart-card:hover .appart-card-bg,
+    .appart-btn:hover {
+        transform: none;
+    }
+}
+.appart-price {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.appart-price-from {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    opacity: 0.85;
+}
+
+.appart-price strong {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.appart-price small {
+    font-size: 11px;
+    font-weight: 400;
+    opacity: 0.75;
+}

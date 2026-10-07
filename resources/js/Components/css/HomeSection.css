@@ -1,0 +1,429 @@
+/* =========================================
+   BASE
+========================================= */
+
+.amenities-section,
+.amenities-section *,
+.about-villa-section,
+.about-villa-section * {
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   AMENITIES
+   Les cartes remontent sur le bas du hero (--amenities-overlap).
+========================================= */
+
+.amenities-section {
+    --amenities-overlap: 70px;
+
+    position: relative;
+    z-index: 10;
+
+    width: 100%;
+    padding: 0 30px;
+
+    background: #e7e9e940;
+}
+
+.amenities-container {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
+
+    width: min(1230px, 100%);
+
+    /* Remonte visuellement ET réduit la hauteur occupée */
+    margin: 0 auto calc(var(--amenities-overlap) * -1);
+    padding: 10px;
+
+    list-style: none;
+
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 15px 45px rgba(30, 75, 75, 0.04);
+
+    transform: translateY(calc(var(--amenities-overlap) * -1));
+}
+
+.amenity-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 110px;
+    padding: 20px 12px;
+
+    border-radius: 11px;
+    background: #e7e9e940;
+
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.amenity-card:hover {
+    transform: translateY(-4px);
+    background: #e1f2f2;
+}
+
+.amenity-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 10px;
+
+    color: #737c9e;
+}
+
+.amenity-icon svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.amenity-card:nth-child(3) .amenity-icon,
+.amenity-card:nth-child(4) .amenity-icon {
+    color: #111;
+}
+
+.amenity-title {
+    margin: 0;
+
+    color: #3b3e52;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+
+/* =========================================
+   ABOUT VILLA
+========================================= */
+
+.about-villa-section {
+    width: 100%;
+    padding: 70px 30px 100px;
+    background: #e7e9e940;
+}
+
+.about-villa-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+
+    width: min(1220px, 100%);
+    min-height: 430px;
+
+    margin: 0 auto;
+    overflow: hidden;
+
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 15px 60px rgba(30, 75, 75, 0.06);
+}
+
+
+/* Image : en absolute pour toujours remplir la colonne */
+
+.about-villa-image {
+    position: relative;
+    min-height: 430px;
+    overflow: hidden;
+}
+
+.about-villa-image img {
+    position: absolute;
+    inset: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.7s ease;
+}
+
+.about-villa-card:hover .about-villa-image img {
+    transform: scale(1.035);
+}
+
+
+/* Texte */
+
+.about-villa-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    min-width: 0;
+    padding: 55px 50px;
+}
+
+.about-villa-label {
+    display: block;
+    margin-bottom: 17px;
+
+    color: #f3456b;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.about-villa-content h2 {
+    margin: 0 0 20px;
+
+    color: #383b50;
+    font-family:  "Times New Roman", serif;
+
+    /* 27px (mobile) → 43px (grand écran) */
+    font-size: clamp(27px, 3.4vw, 43px);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.about-villa-content p {
+    margin: 0 0 15px;
+
+    color: #777e9e;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 0.4px;
+}
+
+
+/* Détails */
+
+.about-villa-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+
+    margin: 12px 0 28px;
+}
+
+.about-villa-detail {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #555b76;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.about-villa-detail-icon {
+    display: flex;
+    flex: 0 0 20px;
+
+    width: 20px;
+    height: 20px;
+
+    color: #f3456b;
+}
+
+.about-villa-detail-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Bouton */
+
+.about-villa-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+
+    min-height: 50px;
+    padding: 0 25px;
+
+    background: #f3456b;
+    color: #fff;
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.about-villa-button:hover {
+    background: #dd2f56;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.about-villa-button:focus-visible {
+    outline: 2px solid #383b50;
+    outline-offset: 3px;
+}
+
+.about-villa-button span {
+    font-size: 20px;
+    line-height: 1;
+}
+
+
+/* =========================================
+   TABLETTE (≤ 991px)
+   Cartes : 3 par ligne, la dernière ligne reste centrée
+========================================= */
+
+@media (max-width: 991px) {
+
+    .amenities-section {
+        padding: 0 25px;
+    }
+
+    .amenities-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .amenity-card {
+        flex: 0 0 calc((100% - 24px) / 3);
+        min-height: 120px;
+    }
+
+    .amenity-title {
+        font-size: 14px;
+    }
+
+    .about-villa-section {
+        padding: 60px 25px 80px;
+    }
+
+    .about-villa-content {
+        padding: 35px 30px;
+    }
+}
+
+
+/* =========================================
+   MOBILE (≤ 767px)
+   Cartes : 2 par ligne, la dernière centrée
+========================================= */
+
+@media (max-width: 767px) {
+
+    .amenities-section {
+        --amenities-overlap: 45px;
+
+        padding: 0 15px;
+    }
+
+    .amenities-container {
+        gap: 10px;
+        padding: 8px;
+    }
+
+    .amenity-card {
+        flex: 0 0 calc((100% - 10px) / 2);
+        min-height: 115px;
+        padding: 15px 8px;
+    }
+
+    .amenity-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .amenity-title {
+        font-size: 12px;
+    }
+
+    .about-villa-section {
+        padding: 55px 15px 75px;
+    }
+
+    .about-villa-card {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        border-radius: 15px;
+    }
+
+    .about-villa-image {
+        min-height: 0;
+        aspect-ratio: 4 / 3;
+        max-height: 340px;
+    }
+
+    .about-villa-content {
+        padding: 35px 25px 40px;
+    }
+
+    .about-villa-content p {
+        font-size: 13px;
+        line-height: 1.9;
+    }
+
+    .about-villa-details {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .about-villa-button {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+
+/* =========================================
+   TRÈS PETITS ÉCRANS (≤ 380px)
+========================================= */
+
+@media (max-width: 380px) {
+
+    .amenity-title {
+        font-size: 11px;
+    }
+
+    .about-villa-content {
+        padding: 30px 20px;
+    }
+}
+
+
+/* =========================================
+   ACCESSIBILITÉ : réduction des animations
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .amenity-card,
+    .about-villa-image img,
+    .about-villa-button {
+        transition: none;
+    }
+
+    .amenity-card:hover,
+    .about-villa-card:hover .about-villa-image img,
+    .about-villa-button:hover {
+        transform: none;
+    }
+}

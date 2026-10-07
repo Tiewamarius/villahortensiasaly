@@ -1,0 +1,313 @@
+.resto-page {
+    --accent: #f3456b;
+    --ink: #222222;
+    --muted: #666666;
+    --tint: #fdf1f4;
+
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--ink);
+}
+
+/* ---------- Hero slider : 400px ---------- */
+
+.resto-hero {
+    position: relative;
+    height: 550px;
+    overflow: hidden;
+    background: #3a2a2e;
+}
+
+.resto-slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease, visibility 0s linear 0.8s;
+}
+
+.resto-slide.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.8s ease, visibility 0s;
+}
+
+/* Voile pour garder le texte et le header lisibles */
+.resto-slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.15) 40%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.resto-slide-content {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 72px 250px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.resto-slide-title {
+    margin: 0 0 8px;
+    max-width: 18ch;
+    font-size: clamp(28px, 4.4vw, 46px);
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.resto-slide-content p {
+    margin: 0;
+    max-width: 52ch;
+    font-size: clamp(15px, 1.6vw, 18px);
+    line-height: 1.5;
+}
+
+.resto-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    margin-top: -22px;
+
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    cursor: pointer;
+
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    transition: background-color 0.3s ease;
+}
+
+.resto-arrow:hover {
+    background: var(--accent);
+}
+
+.resto-arrow.prev { left: 16px; }
+.resto-arrow.next { right: 16px; }
+
+.resto-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 18px;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.resto-dots button {
+    width: 28px;
+    height: 4px;
+    padding: 0;
+
+    border: 0;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+.resto-dots button.active {
+    width: 44px;
+    background: var(--accent);
+}
+
+.resto-arrow:focus-visible,
+.resto-dots button:focus-visible,
+.resto-btn:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
+/* ---------- Sections ---------- */
+
+.resto-section {
+    box-sizing: border-box;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 72px 30px;
+}
+
+.resto-section h2 {
+    margin: 0 0 16px;
+    font-size: clamp(24px, 3vw, 34px);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.resto-intro {
+    max-width: 780px;
+}
+
+.resto-intro p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+/* Offres */
+
+.resto-offers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding-top: 0;
+}
+
+.resto-offer {
+    padding-top: 20px;
+    border-top: 3px solid var(--accent);
+}
+
+.resto-offer h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.resto-offer p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Horaires + contact */
+
+.resto-hours {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 56px;
+    max-width: none;
+    background: var(--tint);
+}
+
+.resto-hours > * {
+    width: 100%;
+    max-width: 560px;
+}
+
+.resto-hours > :first-child { justify-self: end; }
+.resto-hours > :last-child { justify-self: start; }
+
+.resto-hours dl {
+    margin: 0;
+}
+
+.resto-hours-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 17px;
+}
+
+.resto-hours-row dt { font-weight: 600; }
+.resto-hours-row dd { margin: 0; color: var(--muted); }
+
+.resto-cta p {
+    margin: 0 0 24px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.resto-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.resto-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 0 24px;
+
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    background: var(--accent);
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.resto-btn:hover {
+    background: #dd2f56;
+    border-color: #dd2f56;
+    transform: translateY(-2px);
+}
+
+.resto-btn.outline {
+    background: transparent;
+    color: var(--accent);
+}
+
+.resto-btn.outline:hover {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 991px) {
+    .resto-offers {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .resto-hours {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .resto-hours > :first-child,
+    .resto-hours > :last-child {
+        justify-self: stretch;
+        max-width: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .resto-slide-content { padding: 0 20px 48px; }
+    .resto-arrow { display: none; }
+    .resto-section { padding: 48px 20px; }
+    .resto-offers { padding-top: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .resto-slide,
+    .resto-dots button,
+    .resto-btn {
+        transition-duration: 0.01ms !important;
+    }
+}

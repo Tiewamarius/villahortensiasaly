@@ -1,0 +1,284 @@
+
+/* =====================================================
+   FOOTER — RÉSIDENCE NÉHÉMIE
+   Compact Luxury Design
+===================================================== */
+
+.knsl-footer {
+    --f-bg: #172522;
+    --f-text: #e8eeee;
+    --f-muted: #b6c3c0;
+    --f-line: rgba(255, 255, 255, 0.14);
+    --f-accent: #f3456b;
+
+    position: relative;
+    isolation: isolate;
+    background:
+        linear-gradient(
+            110deg,
+            rgba(117, 30, 48, 0.91),
+            rgba(117, 30, 48, 0.91)
+        ),
+        url('/img/Hero-Gallery/ESPACE%20COMMUN%202.jpg')
+        center 55% / cover no-repeat;
+
+    color: var(--f-text);
+    font-family: 'Barlow', system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+
+    padding: 15px clamp(20px, 6vw, 90px) 0;
+    overflow: hidden;
+}
+
+/* Léger flou d'arrière-plan */
+
+.knsl-footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(4px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Conteneur principal */
+
+.knsl-footer__inner {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+/* Partie supérieure */
+
+.knsl-footer__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding-bottom: 15px;
+}
+
+/* Marque */
+
+.knsl-footer__brand {
+    flex: 0 1 380px;
+    max-width: 380px;
+}
+
+.knsl-footer__brand img {
+    display: block;
+    width: auto;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.knsl-footer__brand p {
+    max-width: 350px;
+    margin: 0 0 10px;
+    color: var(--f-muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* Réseaux sociaux */
+
+.knsl-footer__socials {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.knsl-footer__socials a {
+    display: grid;
+    place-items: center;
+
+    width: 36px;
+    height: 36px;
+
+    border: 1px solid var(--f-line);
+    border-radius: 50%;
+
+    color: var(--f-muted);
+    font-size: 14px;
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.knsl-footer__socials a:hover,
+.knsl-footer__socials a:focus-visible {
+    color: #ffffff;
+    background: var(--f-accent);
+    border-color: var(--f-accent);
+    transform: translateY(-3px);
+    outline: none;
+}
+
+/* Navigation rapide */
+
+.knsl-footer__cols {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 13px 30px;
+    margin-left: auto;
+}
+
+.knsl-footer__cols a {
+    position: relative;
+    display: inline-block;
+
+    color: var(--f-text);
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: color 0.25s ease;
+}
+
+.knsl-footer__cols a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--f-accent);
+    transition: width 0.25s ease;
+}
+
+.knsl-footer__cols a:hover,
+.knsl-footer__cols a:focus-visible {
+    color: var(--f-accent);
+    outline: none;
+}
+
+.knsl-footer__cols a:hover::after,
+.knsl-footer__cols a:focus-visible::after {
+    width: 100%;
+}
+
+/* Bas de page */
+
+.knsl-footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* min-height: 53px; */
+    border-top: 1px solid var(--f-line);
+    padding: 12px 0;
+}
+
+.knsl-footer__bottom p {
+    margin: 0;
+    color: var(--f-muted);
+    font-size: 12px;
+}
+
+/* =====================================================
+   TABLETTE
+===================================================== */
+
+@media (max-width: 900px) {
+    .knsl-footer {
+        padding-top: 32px;
+    }
+
+    .knsl-footer__top {
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .knsl-footer__brand {
+        flex-basis: 300px;
+    }
+
+    .knsl-footer__cols {
+        gap: 15px 20px;
+    }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 640px) {
+    .knsl-footer {
+        padding: 30px 22px 0;
+    }
+
+    .knsl-footer__top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        padding-bottom: 25px;
+    }
+
+    .knsl-footer__brand {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .knsl-footer__brand img {
+        height: 52px;
+        margin-bottom: 9px;
+    }
+
+    .knsl-footer__brand p {
+        max-width: 100%;
+        margin-bottom: 15px;
+        font-size: 13px;
+    }
+
+    .knsl-footer__cols {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 14px 22px;
+        margin: 0;
+    }
+
+    .knsl-footer__cols a {
+        font-size: 13px;
+    }
+
+    .knsl-footer__bottom {
+        min-height: 48px;
+        padding: 12px 0;
+    }
+
+    .knsl-footer__bottom p {
+        font-size: 11px;
+    }
+}
+
+/* Très petits écrans */
+
+@media (max-width: 360px) {
+    .knsl-footer {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .knsl-footer__cols {
+        gap: 12px 16px;
+    }
+}

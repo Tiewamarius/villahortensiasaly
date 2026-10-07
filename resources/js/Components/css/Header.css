@@ -1,0 +1,863 @@
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+.site-header,
+.mobile-sidebar,
+.contactsidebar {
+    --accent: #f3456b;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+    --header-height: 80px;
+    --header-pad-x: 30px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    background: rgba(255, 255, 255, 0.08);
+    -webkit-backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
+
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.site-header.scrolled {
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.site-header .header-container {
+    box-sizing: border-box;
+
+    width: 100%;
+    max-width: 1320px;
+    min-height: var(--header-height);
+    margin: 0 auto;
+
+    /* Marges latérales + encoches (iPhone) */
+    padding-left: max(var(--header-pad-x), env(safe-area-inset-left, 0px));
+    padding-right: max(var(--header-pad-x), env(safe-area-inset-right, 0px));
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* =========================================================
+   COLONNES
+   Logo et actions partagent l'espace restant à parts égales,
+   ce qui garde le menu centré.
+========================================================= */
+
+.site-header .header-logo-column,
+.site-header .header-action-column {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.site-header .header-menu-column {
+    flex: 0 1 auto;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.site-header .knsl-logo-frame {
+    display: flex;
+    align-items: center;
+}
+
+.site-header .knsl-logo-frame a {
+    display: inline-flex;
+}
+
+.site-header .knsl-logo-frame img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: clamp(120px, 16vw, 180px);
+    max-height: 70px;
+}
+
+
+/* =========================================================
+   MENU DESKTOP
+========================================================= */
+
+.site-header .knsl-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-header .top-menu-nav-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Espacement fluide : 18px → 38px */
+    gap: clamp(18px, 2.6vw, 38px);
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-header .top-menu-nav-inner .menu-item {
+    margin: 0;
+    padding: 0;
+}
+
+/* Reset du bouton CONTACTEZ-NOUS pour qu'il ressemble aux liens */
+.site-header .top-menu-nav-inner .menu-item button,
+.mobile-sidebar-nav button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+.site-header .top-menu-nav-inner .menu-item a,
+.site-header .top-menu-nav-inner .menu-item button {
+    position: relative;
+
+    display: inline-block;
+    padding: 10px 0;
+
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: none;
+    white-space: nowrap;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+/* Ligne sous le lien / bouton */
+.site-header .top-menu-nav-inner .menu-item a::after,
+.site-header .top-menu-nav-inner .menu-item button::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+
+    width: 0;
+    height: 4px;
+
+    background: currentColor;
+
+    transition: width 0.3s ease;
+}
+
+.site-header .top-menu-nav-inner .menu-item a:hover,
+.site-header .top-menu-nav-inner .menu-item a:focus-visible,
+.site-header .top-menu-nav-inner .menu-item button:hover,
+.site-header .top-menu-nav-inner .menu-item button:focus-visible {
+    color: var(--accent);
+}
+
+.site-header .top-menu-nav-inner .menu-item a:hover::after,
+.site-header .top-menu-nav-inner .menu-item a:focus-visible::after,
+.site-header .top-menu-nav-inner .menu-item button:hover::after,
+.site-header .top-menu-nav-inner .menu-item button:focus-visible::after {
+    width: 100%;
+}
+
+/* Header après scroll */
+.site-header.scrolled .top-menu-nav-inner .menu-item a,
+.site-header.scrolled .top-menu-nav-inner .menu-item button {
+    color: #222222;
+}
+
+.site-header.scrolled .top-menu-nav-inner .menu-item a:hover,
+.site-header.scrolled .top-menu-nav-inner .menu-item a:focus-visible,
+.site-header.scrolled .top-menu-nav-inner .menu-item button:hover,
+.site-header.scrolled .top-menu-nav-inner .menu-item button:focus-visible {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   RÉSERVATION (header + sidebar)
+========================================================= */
+
+.site-header .header-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.site-header .knsl-btn,
+.mobile-sidebar .knsl-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-height: 48px;
+    padding: 0 24px;
+
+    background: var(--accent);
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.site-header .knsl-btn:hover,
+.mobile-sidebar .knsl-btn:hover {
+    background: #dd2f56;
+    transform: translateY(-2px);
+}
+
+.site-header .knsl-btn svg,
+.mobile-sidebar .knsl-btn svg {
+    flex: 0 0 auto;
+    width: 15px;
+    height: 20px;
+    fill: currentColor;
+}
+
+
+/* =========================================================
+   BOUTON HAMBURGER (caché sur desktop)
+========================================================= */
+
+.site-header .knsl-menu-btn {
+    display: none;
+
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    width: 44px;
+    height: 44px;
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.site-header .knsl-menu-btn .bar {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.site-header.scrolled .knsl-menu-btn .bar {
+    background: #222222;
+}
+
+
+/* =========================================================
+   FOCUS CLAVIER
+========================================================= */
+
+.site-header .knsl-menu-btn:focus-visible,
+.site-header .knsl-btn:focus-visible,
+.site-header .knsl-logo-frame a:focus-visible,
+.mobile-sidebar .knsl-btn:focus-visible,
+.mobile-sidebar a:focus-visible,
+.mobile-sidebar button:focus-visible,
+.mobile-sidebar-close:focus-visible,
+.contactsidebar a:focus-visible,
+.contactsidebar_close_btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   OVERLAY (desktop + mobile) : un clic ferme les sidebars
+========================================================= */
+
+.mobile-overlay {
+    display: block;
+
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.mobile-overlay.open {
+    opacity: 1;
+    visibility: visible;
+
+    transition: opacity 0.3s ease, visibility 0s;
+}
+
+
+/* =========================================================
+   SIDEBAR MOBILE (inexistant sur desktop)
+========================================================= */
+
+.mobile-sidebar {
+    display: none;
+}
+
+
+/* =========================================================
+   PANNEAU CONTACT (glisse depuis la droite, desktop + mobile)
+========================================================= */
+
+.contactsidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10001;
+
+    box-sizing: border-box;
+    width: min(86vw, 380px);
+    height: 100vh;
+    height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    background: #ffffff;
+    box-shadow: -12px 0 32px rgba(0, 0, 0, 0.15);
+
+    transform: translateX(100%);
+    visibility: hidden;
+
+    transition: transform 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.contactsidebar.active {
+    transform: translateX(0);
+    visibility: visible;
+
+    transition: transform 0.3s ease, visibility 0s;
+}
+
+.contactsidebar_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    flex: 0 0 auto;
+    min-height: 75px;
+    padding: 0 12px 0 24px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.contactsidebar_header h3 {
+    margin: 0;
+    color: #222222;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.contactsidebar_close_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    font-size: 20px;
+    color: #222222;
+
+    transition: color 0.3s ease;
+}
+
+.contactsidebar_close_btn:hover,
+.contactsidebar_close_btn:focus-visible {
+    color: var(--accent);
+}
+
+.contactsidebar_content {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 24px;
+}
+
+.contactsidebar_content p {
+    margin: 0 0 20px;
+    color: #666666;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.contactsidebar_content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contactsidebar_content ul li + li {
+    margin-top: 12px;
+}
+
+.contactsidebar_content .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 16px;
+
+    background: #f9f9f9;
+    color: #222222;
+
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contactsidebar_content .contact-link:hover {
+    background: rgba(243, 69, 107, 0.08);
+    color: var(--accent);
+}
+
+.contactsidebar_content .contact-link svg {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   TABLETTE ET MOBILE (≤ 991px)
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .site-header {
+        --header-height: 75px;
+        --header-pad-x: 20px;
+    }
+
+    .site-header .header-container {
+        justify-content: space-between;
+    }
+
+    .site-header .header-logo-column,
+    .site-header .header-action-column {
+        flex: 0 0 auto;
+    }
+
+    .site-header .header-menu-column {
+        display: none;
+    }
+
+    .site-header .header-right {
+        gap: 10px;
+    }
+
+    .site-header .knsl-menu-btn {
+        display: inline-flex;
+    }
+
+
+    /* ---------- Sidebar (s'ouvre à gauche) ---------- */
+
+    .mobile-sidebar {
+        display: flex;
+        flex-direction: column;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: auto;
+        z-index: 10001;
+
+        box-sizing: border-box;
+        width: min(86vw, 340px);
+        height: 100vh;
+        height: 100dvh;
+
+        font-family: Georgia, "Times New Roman", serif;
+
+        background: #ffffff;
+        box-shadow: 12px 0 32px rgba(0, 0, 0, 0.15);
+
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+
+        transform: translateX(-100%);
+        visibility: hidden;
+
+        transition: transform 0.3s ease, visibility 0s linear 0.3s;
+    }
+
+    .mobile-sidebar.open {
+        transform: translateX(0);
+        visibility: visible;
+
+        transition: transform 0.3s ease, visibility 0s;
+    }
+
+
+    /* En-tête du sidebar */
+
+    .mobile-sidebar-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        flex: 0 0 auto;
+        min-height: 75px;
+        padding: 0 20px;
+
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .mobile-sidebar-title {
+        color: #222222;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    /* Croix de fermeture */
+
+    .mobile-sidebar-close {
+        position: relative;
+
+        width: 44px;
+        height: 44px;
+        padding: 0;
+
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .mobile-sidebar-close span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 24px;
+        height: 2px;
+
+        background: #222222;
+    }
+
+    .mobile-sidebar-close span:nth-child(1) {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .mobile-sidebar-close span:nth-child(2) {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+
+    /* Liens */
+
+    .mobile-sidebar-nav {
+        flex: 1 1 auto;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    .mobile-sidebar-nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .mobile-sidebar-nav li + li {
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .mobile-sidebar-nav a,
+    .mobile-sidebar-nav button {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 18px 24px;
+
+        color: #222222;
+        font-size: 17px;
+        font-weight: 500;
+        text-align: left;
+        text-decoration: none;
+
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .mobile-sidebar-nav a:hover,
+    .mobile-sidebar-nav button:hover {
+        color: var(--accent);
+        background: rgba(243, 69, 107, 0.06);
+    }
+
+.mobile-sidebar-nav a.active {
+    color: var(--accent);
+    background: rgba(243, 69, 107, 0.06);
+    box-shadow: inset 3px 0 0 var(--accent);
+}
+    /* Bouton réservation en bas */
+
+    .mobile-sidebar-footer {
+        flex: 0 0 auto;
+        padding: 20px 24px;
+
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .mobile-sidebar-footer .knsl-btn {
+        display: flex;
+        /* width: 100%; */
+    }
+}
+
+
+/* =========================================================
+   MOBILE (≤ 575px)
+========================================================= */
+
+@media (max-width: 575px) {
+
+    .site-header {
+        --header-height: 70px;
+        --header-pad-x: 16px;
+    }
+
+    .site-header .header-container {
+        gap: 12px;
+    }
+
+    .site-header .knsl-logo-frame img {
+        max-width: 125px;
+        max-height: 52px;
+    }
+
+    .site-header .knsl-btn {
+        min-height: 42px;
+        padding: 0 14px;
+        gap: 8px;
+        font-size: 13px;
+    }
+
+    .site-header .knsl-btn svg {
+        width: 13px;
+        height: 17px;
+    }
+
+    .contactsidebar_header h3 {
+        font-size: 16px;
+    }
+}
+
+
+/* =========================================================
+   TRÈS PETITS ÉCRANS (≤ 360px) : bouton réduit à l'icône
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .site-header .knsl-btn {
+        padding: 0 12px;
+    }
+
+    .site-header .knsl-btn-label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITÉ : réduction des animations
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .site-header,
+    .site-header *,
+    .mobile-sidebar,
+    .mobile-sidebar *,
+    .mobile-overlay,
+    .contactsidebar,
+    .contactsidebar * {
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Page active : trait toujours visible */
+.site-header .top-menu-nav-inner .menu-item a.active,
+.site-header.scrolled .top-menu-nav-inner .menu-item a.active {
+    color: var(--accent);
+}
+
+.site-header .top-menu-nav-inner .menu-item a.active::after {
+    width: 100%;
+}
+
+/* =========================================================
+   BOUTON DE LANGUE
+========================================================= */
+
+/* Desktop : dans le header */
+.site-header .lang-switch {
+    min-width: 40px;
+    height: 40px;
+    padding: 0 10px;
+
+    border: 0.5px solid currentColor;
+    border-radius: 10px;
+    background: transparent;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: color 0.3s ease;
+}
+
+.site-header.scrolled .lang-switch {
+    color: #222222;
+}
+
+.site-header .lang-switch:hover,
+.site-header .lang-switch:focus-visible {
+    color: var(--accent);
+}
+
+.site-header .lang-switch:focus-visible,
+.mobile-sidebar .lang-switch-mobile:focus-visible {
+    outline: 0.5px solid var(--accent);
+    outline-offset: 1px;
+}
+
+/* Mobile : le bouton du header est masqué, celui du sidebar prend le relais */
+@media (max-width: 991px) {
+    .mobile-sidebar-nav a,
+.mobile-sidebar-nav button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px 24px;
+
+    color: #222222;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: left;
+    text-transform: none;
+    text-decoration: none;
+
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+    .mobile-sidebar-nav a,
+.mobile-sidebar-nav button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px 24px;
+
+    color: #222222;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: left;
+    text-transform: none;
+    text-decoration: none;
+
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+    .site-header .lang-switch {
+        display: none;
+    }
+
+    .mobile-sidebar .lang-switch-mobile {
+        display: block;
+        width: 100%;
+        min-height: 44px;
+        margin-bottom: 12px;
+
+        border: 2px solid rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+        background: transparent;
+        color: #222222;
+
+        font-family: inherit;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+
+        transition: color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .mobile-sidebar .lang-switch-mobile:hover {
+        color: var(--accent);
+        border-color: var(--accent);
+    }
+}

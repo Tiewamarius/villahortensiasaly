@@ -1,0 +1,277 @@
+{
+"nav": {
+"home": "Home",
+"booking": "Booking",
+"rooms": "Gallery",
+"dining": "Dining",
+"contact": "Contact us"
+},
+ 
+"header": {
+    "book": "Book now",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchLang": "Switch the site to French"
+},
+
+"contact": {
+    "title": "Follow us on social media",
+    "text": "Wherever you are, our team will be happy to help.",
+    "email": "Send an email",
+    "directions": "Get directions",
+    "close": "Close contact panel"
+},
+
+"chat": {
+    "welcome": "Hello! I'm the Résidence Néhémie assistant. I can help with apartments, dining and bookings.",
+    "placeholder": "Type your message…",
+    "suggestions": [
+        "Which apartments do you offer?",
+        "What does the restaurant serve?",
+        "How do I book?"
+    ]
+},
+
+"hero": {
+    "title": "Welcome to Résidence Néhémie",
+    "subtitle": "A haven of peace and comfort.",
+    "bookingLabel": "Check availability",
+    "prev": "Previous image",
+    "next": "Next image",
+    "showSlide": "Show image {{number}}",
+    "scroll": "SCROLL",
+    "scrollAria": "Scroll to content",
+
+    "slides": {
+        "welcome": "Welcome to Résidence Néhémie",
+        "common": "Shared area of the residence",
+        "lounge": "Residence lounge"
+    }
+},
+
+"about": {
+    "label": "About Résidence Néhémie",
+    "title": "A peaceful place designed for your comfort",
+    "text1": "Located in Bingerville, Résidence Néhémie offers a warm and elegant setting where comfort, tranquillity and hospitality come together.",
+    "text2": "Our furnished apartments are designed to make every stay pleasant, whether you are travelling for business, with family or simply looking for a peaceful getaway.",
+    "imageAlt": "Shared area of Résidence Néhémie",
+    "location": "Bingerville, Côte d'Ivoire",
+    "lodging": "Furnished apartments",
+    "button": "Discover the residence"
+},
+
+"appart": {
+     "from": "From",
+    "subtitle": "Our apartments",
+    "title1": "Comfort and elegance.",
+    "title2": "Choose your stay.",
+
+    "perNight": "per night",
+    "book": "Book now",
+    "discover": "Discover",
+
+    "items": {
+        "signature": {
+            "location": "Bingerville",
+            "category": "Signature",
+            "name": "Luxury Room",
+            "features": [
+                "Elegant and comfortable living space",
+                "Fully furnished",
+                "Ideal for short and extended stays"
+            ],
+            "description": "A refined apartment offering a peaceful atmosphere and everything you need for a comfortable stay."
+        },
+
+        "elegance": {
+            "location": "Bingerville",
+            "category": "Elegance",
+            "name": "1-bedroom apartment with a living room",
+            "features": [
+                "Spacious and bright interior",
+                "Modern furnishings",
+                "Comfortable environment"
+            ],
+            "description": "A sophisticated space combining modern comfort, practicality and the warm atmosphere of Résidence Néhémie."
+        },
+
+        "prestige": {
+            "location": "Bingerville",
+            "category": "Prestige",
+            "name": "2-bedroom apartment with a living room",
+            "features": [
+                "Premium accommodation",
+                "Elegant interior design",
+                "Designed for an exceptional stay"
+            ],
+            "description": "An exceptional apartment designed for guests seeking more space, comfort and a refined residential experience."
+        }
+    }
+},
+
+"booking": {
+    "pageTitle": "Booking - Résidence Néhémie",
+    "eyebrow": "Résidence Néhémie · Bingerville, Ivory Coast",
+    "title": "Book your suite",
+    "subtitle": "The best rates are guaranteed when you book direct. No hidden fees.",
+
+    "trust": {
+        "secure": "Secure booking",
+        "rate": "Best rate guarantee",
+        "cancel": "Flexible cancellation available"
+    }
+},
+
+
+"map": {
+    "subtitle": "Our location",
+    "title": "Find us easily",
+    "description": "Résidence Néhémie welcomes you in a pleasant setting, ideally located for your stays, business trips and moments of relaxation.",
+    "directions": "View on Google Maps",
+    "signature": "See you soon!",
+    "iframeTitle": "Location of Résidence Néhémie"
+},
+
+"amenities": {
+    "ariaLabel": "Our amenities",
+    "items": {
+        "dining": "Dining",
+        "security": "Security",
+        "internet": "Internet connection",
+        "nonSmoking": "Non-smoking",
+        "airConditioning": "Air conditioning"
+    }
+},
+
+"gallery": {
+    "hero": {
+        "subtitle": "DISCOVER OUR SPACES",
+        "title": "Apartment Gallery",
+        "description": "Explore our apartments through images and choose the one that suits you best."
+    },
+
+    "heroMedia": {
+        "residence": "Résidence Néhémie",
+        "apartment": "Résidence Néhémie apartment",
+        "outdoor": "Résidence Néhémie outdoor area"
+    },
+
+    "sectionLabel": "OUR APARTMENTS",
+    "book": "Book now",
+    "chooseApartment": "Choose an apartment",
+    "photos": "photos",
+    "viewPhoto": "View {{caption}}",
+
+    "locations": {
+        "bingerville": "Bingerville, Ivory Coast"
+    },
+
+    "apartments": {
+        "apartment1": {
+            "title": "Apartment 1",
+            "images": {
+                "livingRoom": "Bright living room and living space",
+                "masterBedroom": "Master bedroom",
+                "terrace": "Terrace overlooking the garden"
+            }
+        },
+
+        "apartment2": {
+            "title": "Apartment 2",
+            "images": {
+                "modernLivingRoom": "Modern and comfortable living room",
+                "premiumBedroom": "Bedroom with premium bedding",
+                "privateOutdoor": "Private outdoor space"
+            }
+        },
+
+        "apartment3": {
+            "title": "Apartment 3",
+            "images": {
+                "livingSpace": "Living area",
+                "masterBedroom": "Master bedroom",
+                "terrace": "Apartment terrace"
+            }
+        }
+    },
+
+    "lightbox": {
+        "preview": "Photo preview",
+        "close": "Close photo",
+        "photo": "Photo {{number}}"
+    }
+},
+ 
+"restauration": {
+  "pageTitle": "Dining - Résidence Néhémie",
+
+  "hero": {
+    "ariaLabel": "Our dining experience",
+    "previous": "Previous slide",
+    "next": "Next slide",
+    "goToSlide": "Go to slide {{number}}"
+  },
+
+  "slides": {
+    "table": {
+      "title": "The Résidence Néhémie dining experience",
+      "text": "Freshly prepared cuisine to enjoy in a relaxed and welcoming setting."
+    },
+    "flavors": {
+      "title": "Flavours from here and beyond",
+      "text": "Ivorian dishes, grilled specialties and recipes from around the world."
+    },
+    "anywhere": {
+      "title": "A meal wherever you prefer",
+      "text": "Enjoy your meal in the dining area, on the terrace or directly in your apartment."
+    }
+  },
+
+  "intro": {
+    "title": "Enjoy great food without leaving the residence",
+    "text": "At Résidence Néhémie, dining is part of the experience. Our cooks work with fresh, local ingredients to offer simple, generous meals prepared to order, whether you are travelling for business, with family or with friends."
+  },
+
+  "offers": {
+    "breakfast": {
+      "title": "Breakfast",
+      "text": "Fresh bread, pastries, seasonal fruit, eggs of your choice, coffee and freshly pressed juices to start your day well."
+    },
+    "lunchDinner": {
+      "title": "Lunch and dinner",
+      "text": "A concise menu that changes regularly, featuring grilled fish and meats, attiéké, alloco, rice dishes and daily specials."
+    },
+    "roomService": {
+      "title": "In-apartment dining",
+      "text": "Order at reception or via WhatsApp, and we will bring your meal directly to your apartment."
+    }
+  },
+
+  "hours": {
+    "title": "Service hours",
+    "breakfast": {
+      "label": "Breakfast"
+    },
+    "lunch": {
+      "label": "Lunch"
+    },
+    "dinner": {
+      "label": "Dinner"
+    }
+  },
+
+  "cta": {
+    "title": "Craving something or have a question?",
+    "text": "Special dietary requirements, group meals or birthdays: let us know in advance and we will take care of the rest.",
+    "whatsapp": "Message us on WhatsApp",
+    "reservation": "Book an apartment"
+  }
+},
+
+
+"footer": {
+    "tagline": "Follow us on social media"
+} 
+
+}

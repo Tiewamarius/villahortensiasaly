@@ -1,0 +1,620 @@
+/* =========================================================
+   HERO
+   Hauteur = au moins l'écran, mais le hero peut grandir si le
+   contenu est plus haut (formulaire empilé sur mobile).
+========================================================= */
+
+.hero,
+.hero *,
+.hero *::before,
+.hero *::after {
+    box-sizing: border-box;
+}
+
+.hero {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    min-height: max(640px, 100vh);
+    min-height: max(640px, 100svh);
+
+    overflow: hidden;
+    background: #222;
+    color: #fff;
+}
+
+
+/* =========================================================
+   BACKGROUND + OVERLAY
+========================================================= */
+
+.hero__background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero__slide {
+    position: absolute;
+    inset: 0;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    opacity: 0;
+    transform: scale(1.04);
+
+    transition:
+        opacity 1.2s ease,
+        transform 8s ease;
+}
+
+.hero__slide--active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.hero__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    /* background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.42) 0%,
+        rgba(0, 0, 0, 0.08) 38%,
+        rgba(0, 0, 0, 0.22) 100%
+    ); */
+}
+
+
+/* =========================================================
+   CONTENU (dans le flux : il pousse la hauteur du hero)
+========================================================= */
+
+.hero__content {
+    position: relative;
+    z-index: 5;
+
+    flex: 1 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 1100px;
+
+    /* Haut : place pour le header fixe ; bas : scroll + indicateurs */
+    padding: 110px 30px 150px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   TITRE
+========================================================= */
+
+.hero__title {
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.hero__title-main {
+    margin: 0;
+
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(25px, 2.5vw, 34px);
+    font-weight: 700;
+    line-height: 1.35;
+
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero__title-subtitle {
+    margin: 12px 0 0;
+
+    color: rgba(255, 255, 255, 0.95);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   BARRE DE RÉSERVATION
+========================================================= */
+
+
+/* =========================================================
+   FLÈCHES DU SLIDER (desktop uniquement, ≥ 1200px)
+   En dessous, elles chevaucheraient la barre de réservation :
+   on utilise le swipe et les indicateurs à la place.
+========================================================= */
+
+.hero__slider-button {
+    position: absolute;
+    z-index: 8;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 54px;
+    height: 54px;
+
+    padding: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+
+    cursor: pointer;
+
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.hero__slider-button svg {
+    width: 30px;
+    height: 30px;
+}
+
+.hero__slider-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+.hero__slider-button--prev {
+    left: 36px;
+}
+
+.hero__slider-button--next {
+    right: 36px;
+}
+
+.hero__slider-button--prev:hover {
+    transform: translate(-4px, -50%);
+}
+
+.hero__slider-button--next:hover {
+    transform: translate(4px, -50%);
+}
+
+
+/* =========================================================
+   INDICATEURS DU SLIDER
+========================================================= */
+
+.hero__indicators {
+    position: absolute;
+    z-index: 8;
+
+    left: 50%;
+    bottom: 100px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 8px;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+.hero:hover .hero__indicators,
+.hero:focus-within .hero__indicators {
+    opacity: 1;
+}
+
+.hero__indicator {
+    position: relative;
+
+    width: 24px;
+    height: 3px;
+
+    padding: 0;
+
+    border: none;
+    background: rgba(255, 255, 255, 0.45);
+
+    cursor: pointer;
+
+    transition:
+        width 0.3s ease,
+        background 0.3s ease;
+}
+
+/* Zone tactile agrandie (la barre ne fait que 3px de haut) */
+
+.hero__indicator::before {
+    content: "";
+
+    position: absolute;
+    inset: -14px -3px;
+}
+
+.hero__indicator--active {
+    width: 42px;
+    background: #f3456b;
+}
+
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+.hero__scroll {
+    position: absolute;
+    z-index: 7;
+
+    left: 50%;
+    bottom: 135px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero__mouse {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
+    width: 20px;
+    height: 30px;
+
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    border-radius: 18px;
+}
+
+.hero__mouse-wheel {
+    position: absolute;
+    top: 8px;
+
+    width: 3px;
+    height: 7px;
+
+    border-radius: 5px;
+    background: #fff;
+
+    animation: scrollWheel 1.8s ease-in-out infinite;
+}
+
+.hero__scroll-text {
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 4px;
+
+    opacity: 0.65;
+}
+
+@keyframes scrollWheel {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    30%,
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.hero__whatsapp {
+    position: fixed;
+    z-index: 30;
+
+    right: 42px;
+    bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    background: #20d366;
+    color: #fff;
+
+    text-decoration: none;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.hero__whatsapp svg {
+    width: 43px;
+    height: 43px;
+}
+
+.hero__whatsapp:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Focus clavier visible */
+
+.hero__slider-button:focus-visible,
+.hero__indicator:focus-visible,
+.hero__booking-submit:focus-visible,
+.hero__scroll:focus-visible,
+.hero__whatsapp:focus-visible {
+    outline: 2px solid #f3456b;
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   < 1200px : pas de flèches, indicateurs toujours visibles
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .hero__slider-button {
+        display: none;
+    }
+
+    .hero__indicators {
+        opacity: 1;
+    }
+}
+
+/* Écrans tactiles : pas de survol possible */
+
+@media (hover: none) {
+
+    .hero__indicators {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   TABLETTE (≤ 991px) : barre sur 2 colonnes + bouton pleine largeur
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .hero__content {
+        padding: 110px 25px 140px;
+    }
+
+    .hero__booking {
+        flex-wrap: wrap;
+
+        width: min(750px, 100%);
+
+        padding: 20px;
+        gap: 16px;
+
+        border-radius: 25px;
+    }
+
+    .hero__booking-field {
+        flex: 1 1 calc(50% - 16px);
+    }
+
+    .hero__booking-submit {
+        flex: 1 1 100%;
+
+        width: 100%;
+        height: 49px;
+
+        margin: 0;
+        gap: 10px;
+
+        border-radius: 30px;
+    }
+
+    .hero__booking-submit-text {
+        display: inline;
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+    }
+}
+
+
+/* =========================================================
+   TABLETTE PORTRAIT / MOBILE (≤ 768px)
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero__scroll {
+        display: none;
+    }
+
+    .hero__indicators {
+        bottom: 80px;
+    }
+
+    .hero__whatsapp {
+        right: 16px;
+        bottom: 16px;
+
+        width: 56px;
+        height: 56px;
+    }
+
+    .hero__whatsapp svg {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE (≤ 600px) : champs empilés
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .hero__content {
+        padding: 100px 18px 120px;
+    }
+
+    .hero__title {
+        margin-bottom: 25px;
+    }
+
+    .hero__title-subtitle {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .hero__booking {
+        flex-direction: column;
+        align-items: stretch;
+        flex-wrap: nowrap;
+
+        width: 100%;
+
+        padding: 20px;
+        gap: 13px;
+
+        border-radius: 22px;
+    }
+
+    .hero__booking-field {
+        display: grid;
+        grid-template-columns: 85px minmax(0, 1fr);
+        flex: none;
+        gap: 10px;
+
+        width: 100%;
+    }
+
+    .hero__booking-input {
+        width: 100%;
+        height: 48px;
+    }
+
+    .hero__booking-submit {
+        flex: none;
+        margin-top: 5px;
+    }
+}
+
+
+/* =========================================================
+   TRÈS PETITS ÉCRANS (≤ 380px)
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .hero__content {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .hero__booking {
+        padding: 15px;
+    }
+
+    .hero__booking-field {
+        grid-template-columns: 70px minmax(0, 1fr);
+    }
+}
+
+
+/* =========================================================
+   PAYSAGE SUR TÉLÉPHONE (écran peu haut)
+========================================================= */
+
+@media (max-height: 600px) and (orientation: landscape) {
+
+    .hero {
+        min-height: 0;
+    }
+
+    .hero__content {
+        padding-top: 95px;
+        padding-bottom: 110px;
+    }
+
+    .hero__indicators {
+        bottom: 80px;
+    }
+
+    .hero__title {
+        margin-bottom: 18px;
+    }
+
+    .hero__scroll {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITÉ : réduction des animations
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero__slide {
+        transform: none;
+        transition: opacity 0.01ms;
+    }
+
+    .hero__mouse-wheel {
+        animation: none;
+        opacity: 1;
+    }
+
+    .hero *,
+    .hero *::before,
+    .hero *::after {
+        transition-duration: 0.01ms !important;
+    }
+}

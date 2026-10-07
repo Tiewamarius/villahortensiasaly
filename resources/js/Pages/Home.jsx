@@ -1,11 +1,28 @@
+
+import MainLayout from '../Layouts/MainLayout';
+import Hero from "../Components/Hero";
+import Amenities from "../Components/Amenities";
+import AboutResidence from "../Components/AboutResidence";
+
+import AppartSection from "../Components/AppartSection";
+import Footer from "../Components/Footer";
+
 export default function Home() {
     return (
-        <main>
-            <h1>Villa hortensiaSaly</h1>
+        <>
+            <MainLayout>
+                <main>
+                    <Hero />
 
-            <p>
-                Bienvenue sur le site officiel de la Villa hortensiaSaly.
-            </p>
-        </main>
+                    <div id="content">
+                        <Amenities />
+                        <AboutResidence />
+                        <AppartSection />
+                    </div>
+
+                    {/* Les prochaines sections viendront ici */}
+                </main>
+            </MainLayout>
+        </>
     );
 }

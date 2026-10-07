@@ -1,26 +1,27 @@
-//
 import '../css/app.css';
-
+import "./i18n";
 import { createInertiaApp } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { createRoot } from 'react-dom/client';
 
-const appName = import.meta.env.VITE_APP_NAME || 'Résidence Néhémie';
-
 createInertiaApp({
-    title: (title) => `${title} - ${appName}`,
+    title: (title) => title
+        ? `${title} - Résidence Néhémie`
+        : 'Résidence Néhémie',
 
     resolve: (name) =>
         resolvePageComponent(
             `./Pages/${name}.jsx`,
-            import.meta.glob('./Pages/**/*.jsx')
+            import.meta.glob('./Pages/**/*.jsx'),
         ),
 
     setup({ el, App, props }) {
-        createRoot(el).render(<App {...props} />);
+        createRoot(el).render(
+            <App {...props} />
+        );
     },
 
     progress: {
-        color: '#2196f3',
+        color: '#000000',
     },
 });

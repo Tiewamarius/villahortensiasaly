@@ -1,0 +1,275 @@
+{
+"nav": {
+"home": "Accueil",
+"booking": "Réservation",
+"rooms": "Galerie",
+"dining": "Restauration",
+"contact": "Contactez-nous"
+},
+ 
+"header": {
+    "book": "Réserver",
+    "menu": "Menu",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "switchLang": "Passer le site en anglais"
+},
+
+"contact": {
+    "title": "Suivez-nous sur les réseaux sociaux",
+    "text": "Où que vous soyez, nos conseillers seront ravis de vous aider.",
+    "email": "Envoyer un e-mail",
+    "directions": "Voir l'itinéraire",
+    "close": "Fermer le panneau de contact"
+},
+
+"chat": {
+    "welcome": "Bonjour ! Je suis l'assistant de la Résidence Néhémie. Je peux vous renseigner sur les appartements, la restauration et les réservations.",
+    "placeholder": "Écrivez votre message…",
+    "suggestions": [
+        "Quels appartements proposez-vous ?",
+        "Que propose la restauration ?",
+        "Comment réserver ?"
+    ]
+},
+
+"hero": {
+    "title": "Bienvenue à la Résidence Néhémie",
+    "subtitle": "Un havre de paix et de confort.",
+    "bookingLabel": "Vérifier la disponibilité",
+    "prev": "Image précédente",
+    "next": "Image suivante",
+    "showSlide": "Afficher l'image {{number}}",
+    "scroll": "DÉFILER",
+    "scrollAria": "Défiler vers le contenu",
+
+    "slides": {
+        "welcome": "Bienvenue à la Résidence Néhémie",
+        "common": "Espace commun de la résidence",
+        "lounge": "Salon de la résidence"
+    }
+},
+
+"about": {
+    "label": "À propos de la Résidence Néhémie",
+    "title": "Un cadre paisible pensé pour votre confort",
+    "text1": "Située à Bingerville, la Résidence Néhémie vous accueille dans un cadre chaleureux et élégant où confort, tranquillité et hospitalité se rencontrent.",
+    "text2": "Nos appartements meublés sont conçus pour rendre chaque séjour agréable, que vous voyagiez pour affaires, en famille ou que vous recherchiez simplement une parenthèse paisible.",
+    "imageAlt": "Espace commun de la Résidence Néhémie",
+    "location": "Bingerville, Côte d'Ivoire",
+    "lodging": "Appartements meublés",
+    "button": "Découvrir la résidence"
+},
+
+"appart": {
+    "from": "À partir de",
+    "subtitle": "Nos appartements",
+    "title1": "Confort et élégance.",
+    "title2": "Choisissez votre séjour.",
+
+    "perNight": "par nuit",
+    "book": "Réserver",
+    "discover": "Découvrir",
+
+    "items": {
+        "signature": {
+            "location": "Bingerville",
+            "category": "Signature",
+            "name": "Chambre de luxe",
+            "features": [
+                "Espace de vie élégant et confortable",
+                "Entièrement meublé",
+                "Idéal pour les courts et longs séjours"
+            ],
+            "description": "Un appartement raffiné offrant une atmosphère paisible et tout le nécessaire pour un séjour confortable."
+        },
+
+        "elegance": {
+            "location": "Bingerville",
+            "category": "Appartement 1 chambre salon",
+            "name": "Appartement 1 chambre salon",
+            "features": [
+                "Intérieur spacieux et lumineux",
+                "Mobilier moderne",
+                "Cadre confortable"
+            ],
+            "description": "Un espace sophistiqué qui associe confort moderne, fonctionnalité et atmosphère chaleureuse de la Résidence Néhémie."
+        },
+
+        "prestige": {
+            "location": "Bingerville",
+            "category": "Prestige",
+            "name": "Appartement 2 chambres salon",
+            "features": [
+                "Hébergement haut de gamme",
+                "Décoration intérieure élégante",
+                "Pensé pour un séjour exceptionnel"
+            ],
+            "description": "Un appartement d'exception conçu pour les voyageurs à la recherche de davantage d'espace, de confort et d'une expérience résidentielle raffinée."
+        }
+    }
+},
+
+"booking": {
+    "pageTitle": "Réservation - Résidence Néhémie",
+    "eyebrow": "Résidence Néhémie · Bingerville, Côte d'Ivoire",
+    "title": "Réservez votre suite",
+    "subtitle": "Les meilleurs tarifs sont garantis lorsque vous réservez directement. Aucun frais caché.",
+
+    "trust": {
+        "secure": "Réservation sécurisée",
+        "rate": "Meilleur tarif garanti",
+        "cancel": "Annulation flexible disponible"
+    }
+},
+"map": {
+    "subtitle": "Notre emplacement",
+    "title": "Trouvez-nous facilement",
+    "description": "La Résidence Néhémie vous accueille dans un cadre agréable, idéalement situé pour vos séjours, vos déplacements professionnels et vos moments de détente.",
+    "directions": "Voir sur Google Maps",
+    "signature": "À très bientôt !",
+    "iframeTitle": "Localisation de la Résidence Néhémie"
+},
+
+"amenities": {
+    "ariaLabel": "Nos équipements",
+    "items": {
+        "dining": "Restauration",
+        "security": "Sécurité",
+        "internet": "Connexion Internet",
+        "nonSmoking": "Non-fumeur",
+        "airConditioning": "Climatisation"
+    }
+},
+
+"gallery": {
+    "hero": {
+        "subtitle": "DÉCOUVREZ NOS ESPACES",
+        "title": "Galerie des appartements",
+        "description": "Découvrez nos appartements en images et choisissez celui qui vous correspond."
+    },
+
+    "heroMedia": {
+        "residence": "Résidence Néhémie",
+        "apartment": "Appartement de la Résidence Néhémie",
+        "outdoor": "Espace extérieur de la Résidence Néhémie"
+    },
+
+    "sectionLabel": "NOS APPARTEMENTS",
+    "book": "Réserver",
+    "chooseApartment": "Choisir un appartement",
+    "photos": "photos",
+    "viewPhoto": "Voir {{caption}}",
+
+    "locations": {
+        "bingerville": "Bingerville, Côte d'Ivoire"
+    },
+
+    "apartments": {
+        "apartment1": {
+            "title": "Appartement 1",
+            "images": {
+                "livingRoom": "Salon lumineux et espace de vie",
+                "masterBedroom": "Chambre principale",
+                "terrace": "Terrasse avec vue sur le jardin"
+            }
+        },
+
+        "apartment2": {
+            "title": "Appartement 2",
+            "images": {
+                "modernLivingRoom": "Salon moderne et confortable",
+                "premiumBedroom": "Chambre avec literie premium",
+                "privateOutdoor": "Espace extérieur privé"
+            }
+        },
+
+        "apartment3": {
+            "title": "Appartement 3",
+            "images": {
+                "livingSpace": "Espace de séjour",
+                "masterBedroom": "Chambre principale",
+                "terrace": "Terrasse de l'appartement"
+            }
+        }
+    },
+
+    "lightbox": {
+        "preview": "Aperçu de la photo",
+        "close": "Fermer la photo",
+        "photo": "Photo {{number}}"
+    }
+},
+ 
+"restauration": {
+  "pageTitle": "Restauration - Résidence Néhémie",
+
+  "hero": {
+    "ariaLabel": "Notre restauration",
+    "previous": "Diapositive précédente",
+    "next": "Diapositive suivante",
+    "goToSlide": "Aller à la diapositive {{number}}"
+  },
+
+  "slides": {
+    "table": {
+      "title": "La table de la Résidence Néhémie",
+      "text": "Une cuisine préparée sur place, à savourer en toute simplicité."
+    },
+    "flavors": {
+      "title": "Des saveurs d'ici et d'ailleurs",
+      "text": "Plats ivoiriens, grillades et recettes du monde."
+    },
+    "anywhere": {
+      "title": "Un repas, où vous le souhaitez",
+      "text": "En salle, en terrasse ou directement dans votre appartement."
+    }
+  },
+
+  "intro": {
+    "title": "Manger bien, sans quitter la résidence",
+    "text": "À la Résidence Néhémie, la restauration fait partie du séjour. Nos cuisiniers travaillent des produits frais et locaux pour vous proposer des repas simples, généreux et préparés à la commande, que vous soyez en voyage d'affaires, en famille ou entre amis."
+  },
+
+  "offers": {
+    "breakfast": {
+      "title": "Petit-déjeuner",
+      "text": "Pain frais, viennoiseries, fruits de saison, œufs au choix, café et jus pressés pour bien démarrer la journée."
+    },
+    "lunchDinner": {
+      "title": "Déjeuner et dîner",
+      "text": "Une carte courte qui change régulièrement : poissons et viandes grillés, attiéké, alloco, riz sauce et plats du jour."
+    },
+    "roomService": {
+      "title": "Service en appartement",
+      "text": "Commandez à la réception ou sur WhatsApp, nous vous apportons votre repas chez vous."
+    }
+  },
+
+  "hours": {
+    "title": "Horaires de service",
+    "breakfast": {
+      "label": "Petit-déjeuner"
+    },
+    "lunch": {
+      "label": "Déjeuner"
+    },
+    "dinner": {
+      "label": "Dîner"
+    }
+  },
+
+  "cta": {
+    "title": "Une envie, une question ?",
+    "text": "Régimes particuliers, repas de groupe, anniversaire : prévenez-nous à l'avance et nous nous occupons du reste.",
+    "whatsapp": "Écrire sur WhatsApp",
+    "reservation": "Réserver un appartement"
+  }
+},
+
+
+"footer": {
+    "tagline": "Suivez-nous sur les réseaux sociaux"
+} 
+
+}

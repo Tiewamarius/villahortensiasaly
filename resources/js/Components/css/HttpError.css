@@ -1,0 +1,206 @@
+
+/* =====================================================
+   HTTP ERROR — RÉSIDENCE NÉHÉMIE
+===================================================== */
+
+.http-error {
+    --error-dark: #173b37;
+    --error-primary: #f3456b;
+    --error-muted: #71827f;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+    padding: 40px 20px 25px;
+
+    overflow: hidden;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(243, 69, 107, 0.08),
+            transparent 35%
+        ),
+        #fffafa;
+
+    font-family: 'Barlow', system-ui, sans-serif;
+}
+
+.http-error__content {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+}
+
+.http-error__logo {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.http-error__logo img {
+    display: block;
+    width: auto;
+    height: 65px;
+    object-fit: contain;
+}
+
+.http-error__code {
+    display: block;
+
+    color: var(--error-primary);
+    font-family: Georgia, serif;
+    font-size: clamp(110px, 22vw, 190px);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.08em;
+
+    opacity: 0.12;
+}
+
+.http-error__eyebrow {
+    display: block;
+    margin: -12px 0 12px;
+
+    color: var(--error-primary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.http-error h1 {
+    margin: 0 0 14px;
+
+    color: var(--error-dark);
+    font-family: Georgia, serif;
+    font-size: clamp(29px, 5vw, 43px);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.http-error__content > p {
+    max-width: 490px;
+    margin: 0 auto;
+
+    color: var(--error-muted);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.http-error__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.http-error__primary,
+.http-error__secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    min-height: 47px;
+    padding: 0 21px;
+
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.http-error__primary {
+    border: 1px solid var(--error-primary);
+    background: var(--error-primary);
+    color: #ffffff;
+}
+
+.http-error__primary:hover {
+    background: #d93259;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.http-error__secondary {
+    border: 1px solid #dce5e2;
+    background: transparent;
+    color: var(--error-dark);
+}
+
+.http-error__secondary:hover {
+    border-color: var(--error-primary);
+    color: var(--error-primary);
+}
+
+.http-error__help {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 9px;
+
+    max-width: 480px;
+    margin: 35px auto 10px;
+
+    color: var(--error-muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.http-error__help svg {
+    flex: 0 0 auto;
+    margin-top: 4px;
+    color: var(--error-primary);
+}
+
+.http-error__rooms {
+    display: inline-block;
+    color: var(--error-dark);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: rgba(243, 69, 107, 0.5);
+    text-underline-offset: 5px;
+}
+
+.http-error__footer {
+    margin-top: 45px;
+    color: #87938f;
+    font-size: 12px;
+}
+
+@media (max-width: 480px) {
+    .http-error {
+        padding: 30px 18px 20px;
+    }
+
+    .http-error__logo img {
+        height: 55px;
+    }
+
+    .http-error__actions {
+        flex-direction: column;
+    }
+
+    .http-error__primary,
+    .http-error__secondary {
+        width: 100%;
+        max-width: 290px;
+    }
+
+    .http-error__help {
+        text-align: left;
+    }
+}

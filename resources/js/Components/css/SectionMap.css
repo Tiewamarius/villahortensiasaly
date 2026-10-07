@@ -1,0 +1,361 @@
+
+/* =====================================================
+   MAP SECTION — RÉSIDENCE NÉHÉMIE
+   Elegant Location Design
+===================================================== */
+
+.map-section {
+    --map-bg: #fff9f9;
+    --map-dark: #183a37;
+    --map-text: #334c49;
+    --map-muted: #71827f;
+    --map-primary: #f3456b;
+    --map-line: rgba(255, 255, 255, 0.15);
+
+    position: relative;
+    overflow: hidden;
+
+    padding: 15px clamp(20px, 6vw, 10px);
+
+    background:
+        radial-gradient(
+            circle at 5% 90%,
+            rgba(243, 69, 107, 0.055),
+            transparent 28%
+        ),
+        var(--map-bg);
+
+    font-family: 'Barlow', system-ui, sans-serif;
+}
+
+.map-container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.map-header {
+    max-width: 700px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.map-subtitle {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+
+    color: var(--map-primary);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.map-subtitle::before,
+.map-subtitle::after {
+    content: '';
+    width: 35px;
+    height: 1px;
+    background: var(--map-primary);
+}
+
+.map-title {
+    margin: 13px 0 14px;
+
+    color: var(--map-dark);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+}
+
+.map-description {
+    max-width: 630px;
+    margin: 0 auto;
+
+    color: var(--map-muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* =====================================================
+   MAP CARD
+===================================================== */
+
+.map-card {
+    display: grid;
+    grid-template-columns: 340px minmax(0, 1fr);
+
+    min-height: 440px;
+
+    overflow: hidden;
+    border-radius: 17px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 20px 65px rgba(35, 54, 50, 0.10),
+        0 3px 12px rgba(35, 54, 50, 0.04);
+}
+
+/* =====================================================
+   INFORMATION PANEL
+===================================================== */
+
+.map-info {
+    position: relative;
+    isolation: isolate;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 38px 30px;
+
+    color: black;
+
+    background:
+        linear-gradient(
+            155deg,
+            rgba(180, 229, 239, 0.91),
+            rgba(180, 229, 239, 0.91)
+        ),
+        url('/img/Hero-Gallery/ESPACE%20COMMUN%202.jpg')
+        center / cover no-repeat;
+}
+
+.map-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    padding: 17px 0;
+    border-bottom: 1px solid var(--map-line);
+}
+
+.map-icon {
+    display: flex;
+    flex: 0 0 42px;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #0034DE;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.map-info-content {
+    min-width: 0;
+}
+
+.map-info-content h3 {
+    margin: 0 0 5px;
+
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.map-info-content p,
+.map-info-content a {
+    display: block;
+    margin: 0;
+    color: #3b3e52;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    
+    line-height: 1.7;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.map-info-content a:hover {
+    color: #ffffff;
+}
+
+/* Bouton itinéraire */
+
+.map-directions-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: fit-content;
+    max-width: 100%;
+
+    margin-top: 25px;
+    padding: 14px 20px;
+
+    border-radius: 50px;
+
+    background: #0034DE;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.map-directions-btn:hover {
+    background: #d93259;
+    color: #ffffff;
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(243, 69, 107, 0.25);
+}
+
+/* Signature */
+
+.map-signature {
+    margin-top: 27px;
+
+    color: #3b3e52;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 31px;
+    font-style: italic;
+    font-weight: 500;
+    transform: rotate(-4deg);
+}
+
+/* =====================================================
+   GOOGLE MAP
+===================================================== */
+
+.map-frame {
+    position: relative;
+    min-width: 0;
+    min-height: 440px;
+    background: #e9eeee;
+}
+
+.map-frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 440px;
+    border: 0;
+}
+
+/* =====================================================
+   TABLETTE
+===================================================== */
+
+@media (max-width: 900px) {
+    .map-section {
+        padding: 70px 25px;
+    }
+
+    .map-card {
+        grid-template-columns: 290px minmax(0, 1fr);
+        min-height: 400px;
+    }
+
+    .map-info {
+        padding: 28px 22px;
+    }
+
+    .map-frame,
+    .map-frame iframe {
+        min-height: 400px;
+    }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 680px) {
+    .map-section {
+        padding: 60px 18px;
+    }
+
+    .map-header {
+        margin-bottom: 30px;
+    }
+
+    .map-title {
+        font-size: 33px;
+    }
+
+    .map-description {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .map-card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 14px;
+    }
+
+    .map-info {
+        padding: 25px 22px 28px;
+    }
+
+    .map-info-item {
+        padding: 14px 0;
+    }
+
+    .map-icon {
+        flex-basis: 38px;
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+    }
+
+    .map-info-content h3 {
+        font-size: 16px;
+    }
+
+    .map-info-content p,
+    .map-info-content a {
+        font-size: 13px;
+    }
+
+    .map-directions-btn {
+        width: 80%;
+        margin-top: 22px;
+    }
+
+    .map-signature {
+        margin-top: 22px;
+        font-size: 28px;
+    }
+
+    .map-frame,
+    .map-frame iframe {
+        min-height: 320px;
+        height: 320px;
+    }
+}
+
+/* Petits écrans */
+
+@media (max-width: 360px) {
+    .map-section {
+        padding-right: 13px;
+        padding-left: 13px;
+    }
+
+    .map-info {
+        padding-right: 17px;
+        padding-left: 17px;
+    }
+}
