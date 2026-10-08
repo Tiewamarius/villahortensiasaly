@@ -1,76 +1,242 @@
- @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Playfair+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Playfair+Display:wght@500&display=swap');
 
-:root {
-    --gold: #f3456b;
-    --gold-dark: #f3456b;
-    --ink: #1c1c1c;
-    --header-h: 90px; /* hauteur de votre Header fixe ; mettre 0 s'il n'est pas fixe */
-    --page-pad: clamp(20px, 7vw, 100px);
+/* =========================================================
+   MODALE DE RÉSERVATION — thème bleu
+========================================================= */
+
+.booking-modal {
+    --booking-blue: #3b5bdb;
+    --booking-blue-dark: #2f4ac0;
+    --booking-blue-soft: #eef1fc;
+    --booking-ink: #1c1c1c;
+    --booking-muted: #5b6280;
+    --booking-line: #e3e8f6;
+
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    font-family: 'Barlow', system-ui, sans-serif;
+    color: var(--booking-ink);
 }
 
-.booking-page { font-family: 'Barlow', system-ui, sans-serif; color: var(--ink); background: #fff; }
+.booking-modal.is-closed {
+    display: none;
+}
 
-/* ---------- Hero ---------- */
-.booking-hero {
+.booking-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 26, 50, 0.62);
+    backdrop-filter: blur(2px);
+    animation: booking-fade 0.25s ease;
+}
+
+/* Pas de transform persistant sur le panneau : la barre collante utilise position: fixed */
+.booking-modal__panel {
     position: relative;
-    min-height: 300px;
-    padding: calc(var(--header-h) + 8px) var(--page-pad) 32px;
-    color: #fff;
-    background:
-        /* linear-gradient(rgba(10, 10, 10, 0.55), rgba(10, 10, 10, 0.7)), */
-        url('/img/BANNIERE/Bannière 3.jpg') center / cover no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    width: min(1100px, 100%);
+    max-height: min(92vh, 900px);
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 30px 80px rgba(20, 26, 50, 0.35);
+    overflow: hidden;
+    animation: booking-pop 0.28s ease;
 }
 
-.booking-hero__eyebrow {
-    margin: 0 0 12px; color: var(--gold); font-weight: 500;
-    font-size: 14px; letter-spacing: 0.16em; text-transform: uppercase;
+@keyframes booking-fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
-.booking-hero h1 {
-    margin: 0 0 14px; font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 500; font-size: clamp(36px, 5vw, 56px); line-height: 1.05;
+
+@keyframes booking-pop {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: none; }
 }
-.booking-hero__sub { margin: 0 0 22px; max-width: 60ch; color: rgba(255, 255, 255, 0.72); font-size: 16px; }
 
-.booking-trust { display: flex; flex-wrap: wrap; gap: 8px 28px; margin: 0; padding: 0; list-style: none; font-size: 13.5px; color: rgba(255, 255, 255, 0.7); }
-.booking-trust li { display: flex; align-items: center; gap: 8px; }
-.booking-trust svg { color: var(--gold); }
+/* ---------- En-tête ---------- */
 
-/* ---------- Conteneur du widget (juste sous le hero, sans chevauchement) ---------- */
+.booking-modal__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 28px;
+    border-bottom: 1px solid var(--booking-line);
+}
+
+.booking-modal__eyebrow {
+    margin: 0 0 6px;
+    color: var(--booking-blue);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.booking-modal__header h2 {
+    margin: 0;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(24px, 3vw, 32px);
+    line-height: 1.1;
+}
+
+.booking-modal__close {
+    flex: 0 0 auto;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--booking-blue-soft);
+    color: var(--booking-blue);
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.booking-modal__close:hover {
+    background: var(--booking-blue);
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+/* ---------- Corps (zone scrollable) ---------- */
+
+.booking-modal__body {
+    flex: 1 1 auto;
+    min-height: 0;
+    padding: 24px 28px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
 .hotel-link-widget-container {
-    max-width: 1100px;
-    margin: 44px auto 60px;
-    padding: 0 20px;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.ng-scope{
- border-radius: 10px;
+/* ---------- Pied (garanties) ---------- */
+
+.booking-modal__footer {
+    padding: 14px 28px;
+    border-top: 1px solid var(--booking-line);
+    background: #f7f9ff;
 }
+
+.booking-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 28px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 13.5px;
+    color: var(--booking-muted);
+}
+
+.booking-trust li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.booking-trust svg {
+    color: var(--booking-blue);
+}
+
+/* =========================================================
+   WIDGET SECUREBOOKINGS
+========================================================= */
 
 .hbe-bws,
-.hbe-bws * { font-family: 'Barlow', system-ui, sans-serif; }
+.hbe-bws * {
+    font-family: 'Barlow', system-ui, sans-serif;
+}
+
+.hbe-bws .ng-scope {
+    border-radius: 10px;
+}
 
 .hbe-bws button.btn-primary,
 .hbe-bws .search-button,
 .hbe-bws button[type='submit'] {
-    background-color: var(--gold) !important;
-    border-color: var(--gold) !important;
+    background-color: #3b5bdb !important;
+    border-color: #3b5bdb !important;
     color: #fff !important;
     font-weight: 600;
     border-radius: 6px;
 }
+
 .hbe-bws button.btn-primary:hover,
 .hbe-bws .search-button:hover,
-.hbe-bws button[type='submit']:hover { background-color: var(--gold-dark) !important; }
+.hbe-bws button[type='submit']:hover {
+    background-color: #2f4ac0 !important;
+    border-color: #2f4ac0 !important;
+}
 
 .hbe-bws input:focus-visible,
 .hbe-bws select:focus-visible,
-.hbe-bws button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.hbe-bws button:focus-visible,
+.booking-modal__close:focus-visible {
+    outline: 2px solid #3b5bdb;
+    outline-offset: 2px;
+}
 
-/* ---------- Barre de dates fixée au défilement (voir useStickySearchBar) ---------- */
+/* Barre de dates fixée au défilement (voir useStickySearchBar) */
 .hbe-bws .is-stuck {
     background: #fff;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(20, 26, 50, 0.14);
+}
+
+/* =========================================================
+   MOBILE : feuille plein écran
+========================================================= */
+
+@media (max-width: 767px) {
+    .booking-modal {
+        padding: 0;
+        align-items: stretch;
+    }
+
+    .booking-modal__panel {
+        width: 100%;
+        max-height: none;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .booking-modal__header,
+    .booking-modal__footer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .booking-modal__body {
+        padding: 16px;
+    }
+
+    .booking-trust {
+        gap: 6px 18px;
+        font-size: 12.5px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .booking-modal__backdrop,
+    .booking-modal__panel {
+        animation: none;
+    }
+
+    .booking-modal__close {
+        transition: none;
+    }
 }

@@ -123,7 +123,7 @@
     align-items: stretch;
 
     width: min(1220px, 100%);
-    min-height: 430px;
+    min-height: 350px;
 
     margin: 0px auto;
     overflow: hidden;

@@ -112,7 +112,7 @@ export default function AboutVilla() {
 
                             <div className="about-villa-detail">
 
-                                <span
+                                {/* <span
                                     className="about-villa-detail-icon"
                                     aria-hidden="true"
                                 >
@@ -121,13 +121,13 @@ export default function AboutVilla() {
 
                                 <span>
                                     {t("about.location")}
-                                </span>
+                                </span> */}
 
                             </div>
 
 
                             <div className="about-villa-detail">
-
+{/* 
                                 <span
                                     className="about-villa-detail-icon"
                                     aria-hidden="true"
@@ -137,7 +137,7 @@ export default function AboutVilla() {
 
                                 <span>
                                     {t("about.lodging")}
-                                </span>
+                                </span> */}
 
                             </div>
 
@@ -173,21 +173,21 @@ export default function AboutVilla() {
 
                     <div className="about-villa-content">
 
-                        <span className="about-villa-label">
+                        {/* <span className="about-villa-label">
                             {t("about.secondLabel")}
-                        </span>
+                        </span> */}
 
                         <h2>
-                            {t("about.secondTitle")}
+                            {t("aboutSecondair.title")}
                         </h2>
 
                         <p>
-                            {t("about.secondText1")}
+                            {t("aboutSecondair.text1")}
                         </p>
 
-                        <p>
-                            {t("about.secondText2")}
-                        </p>
+                        {/* <p>
+                            {t("aboutSecondair.secondText2")}
+                        </p> */}
 
 
                         {/* DÉTAILS */}
@@ -196,7 +196,7 @@ export default function AboutVilla() {
 
                             <div className="about-villa-detail">
 
-                                <span
+                                {/* <span
                                     className="about-villa-detail-icon"
                                     aria-hidden="true"
                                 >
@@ -204,15 +204,15 @@ export default function AboutVilla() {
                                 </span>
 
                                 <span>
-                                    {t("about.secondLocation")}
-                                </span>
+                                    {t("aboutSecondair.secondLocation")}
+                                </span> */}
 
                             </div>
 
 
                             <div className="about-villa-detail">
 
-                                <span
+                                {/* <span
                                     className="about-villa-detail-icon"
                                     aria-hidden="true"
                                 >
@@ -220,8 +220,8 @@ export default function AboutVilla() {
                                 </span>
 
                                 <span>
-                                    {t("about.secondLodging")}
-                                </span>
+                                    {t("aboutSecondair.secondLodging")}
+                                </span> */}
 
                             </div>
 
@@ -249,7 +249,7 @@ export default function AboutVilla() {
                     <div className="about-villa-image">
 
                         <img
-                            src="/img/BANNIERE/Apropos.jpg"
+                            src="/img/BANNIERE/Apropos2.jpg"
                             alt={t("about.secondImageAlt")}
                             loading="lazy"
                         />

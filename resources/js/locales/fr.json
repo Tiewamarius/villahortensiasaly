@@ -51,10 +51,18 @@
 },
 
 "about": {
-    "label": "À propos de la Résidence Néhémie",
-    "title": "La Villa Hortensia",
+    "title": "À propos de la Villa Hortensia",
     "text1": "Située à Sali Tap, à proximité de la plage de Saly-Portudal et du golf de Saly, la Villa Hortensia RDC propose des hébergements avec un parking privé gratuit.",
     "text2": "Cet appartement se trouve à 18 km du parc d'aventure Accrobaobab.  L'aéroport international Blaise Diagne, le plus proche, est implanté à 32 km.",
+    "imageAlt": "Espace commun de la Résidence Néhémie",
+    "location": "Bingerville, Côte d'Ivoire",
+    "lodging": "Appartements meublés",
+    "button": "Découvrir la résidence"
+},
+
+"aboutSecondair": {
+    "title": "Rejoignez la Villa du Confort",
+    "text1": "Offrez-vous un havre de paix et de détente ultime en rejoignant une villa de confort, où chaque instant promet sérénité et bien-être.",
     "imageAlt": "Espace commun de la Résidence Néhémie",
     "location": "Bingerville, Côte d'Ivoire",
     "lodging": "Appartements meublés",

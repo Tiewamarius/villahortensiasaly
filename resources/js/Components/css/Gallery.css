@@ -10,7 +10,7 @@
   --g-shadow: 0 10px 40px rgba(60, 90, 120, 0.08);
 
   font-family: "Jost", system-ui, sans-serif;
-  padding: 60px 0 100px;
+  padding: 90px 0 100px;
   background: linear-gradient(180deg, var(--g-bg-top), var(--g-bg-bottom));
 }
 
