@@ -71,12 +71,12 @@
 
     gap: 12px;
 
-    padding: 7px 7px 7px 25px !important;
+    padding: 10px 10px 10px 30px !important;
 
     border: 1px solid
         rgba(255, 255, 255, 0.75) !important;
 
-    border-radius: 15px !important;
+    border-radius: 100px !important;
 
     background: rgba(255, 255, 255, 0.98) !important;
 
@@ -209,7 +209,7 @@ html[lang^="en"]
 
     min-width: 0 !important;
 
-    height: 46px;
+    height: 55px;
 
     margin: 0 !important;
 
@@ -388,7 +388,7 @@ html[lang^="en"]
 
     border-radius: 11px !important;
 
-    background: #d76b8917 !important;
+    background: #e8f5f6 !important;
 
     color: #4a5075 !important;
 
@@ -453,7 +453,7 @@ html[lang^="en"]
     #hbe_promo_code:focus {
     background: #dceff1 !important;
 
-    border-color: #f3456b !important;
+    border-color: #3558cf !important;
 
     box-shadow:
         0 0 0 3px
@@ -537,7 +537,7 @@ html[lang^="en"]
 
     border-radius: 50% !important;
 
-    background-color: #f3456b !important;
+    background-color: #3558cf !important;
 
     background-image:
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='10.8' cy='10.8' r='6.8'/%3E%3Cpath d='M16 16L21 21'/%3E%3C/svg%3E") !important;
@@ -567,7 +567,7 @@ html[lang^="en"]
 
 
 .booking-widget .bws-button:hover {
-    background-color: #f3456b !important;
+    background-color: #3558cf !important;
 
     transform: scale(1.05);
 }
@@ -720,7 +720,7 @@ html[lang^="en"]
 
 
 .qtip .qtip-content a {
-    color: #f3456b98 !important;
+    color: #4e91f598 !important;
 }
 
 
@@ -736,7 +736,7 @@ html[lang^="en"]
 .booking-widget .bws-button:focus-visible,
 .booking-widget .show-date:focus-visible,
 .booking-widget #hbe_promo_code:focus-visible {
-    outline: 2px solid #f3456b !important;
+    outline: 2px solid #3558cf !important;
 
     outline-offset: 3px;
 }
@@ -753,9 +753,9 @@ html[lang^="en"]
         gap: clamp(6px, 1.5vw, 10px);
 
         padding:
-            clamp(7px, 1.2vw, 10px)
-            clamp(7px, 1.2vw, 10px)
-            clamp(7px, 1.2vw, 10px)
+            clamp(10px, 1.2vw, 10px)
+            clamp(10px, 1.2vw, 10px)
+            clamp(10px, 1.2vw, 10px)
             clamp(14px, 3vw, 24px) !important;
     }
 

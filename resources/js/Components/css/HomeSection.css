@@ -24,14 +24,14 @@
     width: 100%;
     padding: 0 30px;
 
-    background: #e7e9e940;
+    background: #F2FFFF;
 }
 
 .amenities-container {
     position: relative;
 
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 20px;
 
     width: min(1230px, 100%);
@@ -41,8 +41,6 @@
     padding: 10px;
 
     list-style: none;
-
-    border-radius: 12px;
     background: #fff;
     box-shadow: 0 15px 45px rgba(30, 75, 75, 0.04);
 
@@ -59,7 +57,7 @@
     padding: 20px 12px;
 
     border-radius: 11px;
-    background: #e7e9e940;
+    background: #F2FFFF;
 
     text-align: center;
 
@@ -116,7 +114,7 @@
 .about-villa-section {
     width: 100%;
     padding: 70px 30px 100px;
-    background: #e7e9e940;
+    background: #F2FFFF;
 }
 
 .about-villa-card {
@@ -127,14 +125,16 @@
     width: min(1220px, 100%);
     min-height: 430px;
 
-    margin: 0 auto;
+    margin: 0px auto;
     overflow: hidden;
 
-    border-radius: 20px;
     background: #fff;
     box-shadow: 0 15px 60px rgba(30, 75, 75, 0.06);
 }
 
+.about-villa-container {
+    border-radius: 30px;
+}
 
 /* Image : en absolute pour toujours remplir la colonne */
 
@@ -169,7 +169,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-
+border-radius: 20px;
     min-width: 0;
     padding: 55px 50px;
 }
@@ -178,7 +178,7 @@
     display: block;
     margin-bottom: 17px;
 
-    color: #f3456b;
+    color: #3c62df;
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 3px;
@@ -236,7 +236,7 @@
     width: 20px;
     height: 20px;
 
-    color: #f3456b;
+    color: #3c62df;
 }
 
 .about-villa-detail-icon svg {
@@ -252,11 +252,11 @@
     align-items: center;
     justify-content: center;
     gap: 22px;
-
+    border-radius: 50px;
     min-height: 50px;
     padding: 0 25px;
 
-    background: #f3456b;
+    background: #3c62df;
     color: #fff;
 
     font-size: 12px;
@@ -270,7 +270,7 @@
 }
 
 .about-villa-button:hover {
-    background: #dd2f56;
+    background: #3c62df;
     color: #fff;
     transform: translateY(-2px);
 }

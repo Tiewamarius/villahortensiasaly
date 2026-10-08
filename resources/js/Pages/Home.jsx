@@ -4,7 +4,9 @@ import Hero from "../Components/Hero";
 import Amenities from "../Components/Amenities";
 import AboutResidence from "../Components/AboutResidence";
 
-import AppartSection from "../Components/AppartSection";
+import Noschambres from "../Components/Noschambres";
+import Nosmobilier from "../Components/Nosmobilier";
+
 import Footer from "../Components/Footer";
 
 export default function Home() {
@@ -17,7 +19,8 @@ export default function Home() {
                     <div id="content">
                         <Amenities />
                         <AboutResidence />
-                        <AppartSection />
+                        <Noschambres />
+                        <Nosmobilier />
                     </div>
 
                     {/* Les prochaines sections viendront ici */}

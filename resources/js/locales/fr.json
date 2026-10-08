@@ -2,8 +2,8 @@
 "nav": {
 "home": "Accueil",
 "booking": "Réservation",
-"rooms": "Galerie",
-"dining": "Restauration",
+"rooms": "Nos chambres",
+"about": "À propos",
 "contact": "Contactez-nous"
 },
  
@@ -34,13 +34,13 @@
 },
 
 "hero": {
-    "title": "Bienvenue à la Résidence Néhémie",
+    "title": "Bienvenue à la Villa Hortensia , Saly",
     "subtitle": "Un havre de paix et de confort.",
     "bookingLabel": "Vérifier la disponibilité",
     "prev": "Image précédente",
     "next": "Image suivante",
     "showSlide": "Afficher l'image {{number}}",
-    "scroll": "DÉFILER",
+    "scroll": "Descendre pour voir plus",
     "scrollAria": "Défiler vers le contenu",
 
     "slides": {
@@ -52,9 +52,9 @@
 
 "about": {
     "label": "À propos de la Résidence Néhémie",
-    "title": "Un cadre paisible pensé pour votre confort",
-    "text1": "Située à Bingerville, la Résidence Néhémie vous accueille dans un cadre chaleureux et élégant où confort, tranquillité et hospitalité se rencontrent.",
-    "text2": "Nos appartements meublés sont conçus pour rendre chaque séjour agréable, que vous voyagiez pour affaires, en famille ou que vous recherchiez simplement une parenthèse paisible.",
+    "title": "La Villa Hortensia",
+    "text1": "Située à Sali Tap, à proximité de la plage de Saly-Portudal et du golf de Saly, la Villa Hortensia RDC propose des hébergements avec un parking privé gratuit.",
+    "text2": "Cet appartement se trouve à 18 km du parc d'aventure Accrobaobab.  L'aéroport international Blaise Diagne, le plus proche, est implanté à 32 km.",
     "imageAlt": "Espace commun de la Résidence Néhémie",
     "location": "Bingerville, Côte d'Ivoire",
     "lodging": "Appartements meublés",
@@ -270,6 +270,60 @@
 
 "footer": {
     "tagline": "Suivez-nous sur les réseaux sociaux"
-} 
+},
+
+
+
+
+  "rooms": {
+    "details": "Détails",
+    "adults": "Adultes :",
+    "children": "Enfants :",
+    "facilitiesLabel": "Équipements :",
+    "size": "Taille :",
+    "sizeValue": "{{value}} ft²",
+    "categories": "Catégories :",
+    "book": "Réserver",
+    "prev": "Diapositive précédente",
+    "next": "Diapositive suivante",
+    "category": {
+      "economy": "Économique",
+      "standard": "Standard"
+    },
+    "facilities": {
+      "4-private-pools": "4 piscines privées",
+      "air-conditioning": "Climatisation",
+      "airport-transfer": "Transfert aéroport",
+      "all-inclusive": "Tout inclus",
+      "wifi": "Wi-Fi gratuit",
+      "laundry": "Blanchisserie",
+      "smart-tv": "Smart TV",
+      "under-protection": "Sécurisé"
+    },
+    "items": {
+      "economyClassic": {
+        "title": "Chambre Économique Classique",
+        "description": "Une chambre simple et confortable, idéale pour un séjour au bord de la mer."
+      },
+      "tripleClassic": {
+        "title": "Chambre Triple Classique",
+        "description": "Une chambre spacieuse pouvant accueillir jusqu'à trois adultes et deux enfants."
+      },
+      "standard": {
+        "title": "Chambre Standard",
+        "description": "Une chambre lumineuse et bien équipée pour profiter pleinement de la villa."
+      },
+      "double": {
+        "title": "Chambre Double",
+        "description": "Une chambre élégante pour deux personnes, au calme et proche de la plage."
+      }
+    },
+    "heading": {
+      "title": "Nos meilleures chambres",
+      "text": "Des chambres lumineuses et confortables, pensées pour votre détente, à deux pas de la plage.",
+      "cta": "Toutes les chambres"
+    }
+  }
+
 
 }

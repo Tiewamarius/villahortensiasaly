@@ -1,0 +1,300 @@
+/* ===== Nosmobilier – section galerie ===== */
+
+.nosmobilier {
+  --knsl-accent: #c9a46a;
+  --knsl-dark: #1c1c1c;
+  --knsl-text: #6b6b6b;
+  --knsl-bg: #fff;
+
+  position: relative;
+  padding: 0 0 100px;
+  overflow: hidden;
+  background: var(--knsl-bg);
+}
+
+.nosmobilier .container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Décoration palmier */
+.nosmobilier .knsl-deco-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 220px;
+  max-width: 25vw;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* Marges utilitaires */
+.nosmobilier .knsl-mb-20 { margin-bottom: 20px; }
+.nosmobilier .knsl-mb-30 { margin-bottom: 30px; }
+.nosmobilier .knsl-mb-100 { margin-bottom: 100px; }
+
+/* Bloc titre */
+.nosmobilier .knsl-title-frame {
+  position: relative;
+  z-index: 1;
+  padding-top: 100px;
+}
+
+.nosmobilier .knsl-center {
+  text-align: center;
+}
+
+.nosmobilier .knsl-title--h {
+  margin: 0 0 20px;
+  font-size: clamp(30px, 4vw, 52px);
+  line-height: 1.15;
+  font-weight: 500;
+  color: var(--knsl-dark);
+}
+
+.nosmobilier .knsl-text {
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nosmobilier .knsl-text p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--knsl-text);
+}
+
+/* Bouton */
+.nosmobilier .knsl-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  height: 52px;
+  border: 1px solid var(--knsl-dark);
+  color: var(--knsl-dark);
+  background: transparent;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.nosmobilier .knsl-btn:hover,
+.nosmobilier .knsl-btn:focus-visible {
+  background: var(--knsl-dark);
+  color: #fff;
+}
+
+/* ===== Slider ===== */
+.nosmobilier .knsl-about-slider {
+  position: relative;
+}
+
+.nosmobilier .knsl-about-slider .swiper {
+  overflow: visible;
+}
+
+.nosmobilier .knsl-image-frame {
+  position: relative;
+  height: 448px;
+  overflow: hidden;
+}
+
+.nosmobilier .knsl-image-link {
+  all: unset;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: zoom-in;
+}
+
+.nosmobilier .knsl-image-link:focus-visible {
+  outline: 3px solid var(--knsl-accent);
+  outline-offset: -3px;
+}
+
+.nosmobilier .knsl-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.nosmobilier .knsl-image-link:hover img {
+  transform: scale(1.04);
+}
+
+/* Badge légende */
+.nosmobilier .knsl-badge {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  padding: 10px 20px;
+  background: var(--knsl-bg);
+  color: var(--knsl-dark);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+}
+
+/* Icône zoom */
+.nosmobilier .knsl-zoom {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--knsl-bg);
+  color: var(--knsl-dark);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.nosmobilier .knsl-image-link:hover .knsl-zoom,
+.nosmobilier .knsl-image-link:focus-visible .knsl-zoom {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Navigation */
+.nosmobilier .knsl-slider-nav-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.nosmobilier .knsl-about-slider-1-pagination {
+  font-size: 16px;
+  color: var(--knsl-dark);
+  letter-spacing: 0.1em;
+}
+
+.nosmobilier .knsl-about-slider-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.nosmobilier .knsl-about-slider-1-prev,
+.nosmobilier .knsl-about-slider-1-next {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--knsl-dark);
+  background: transparent;
+  color: var(--knsl-dark);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, opacity 0.3s;
+}
+
+.nosmobilier .knsl-about-slider-1-prev:hover:not(:disabled),
+.nosmobilier .knsl-about-slider-1-next:hover:not(:disabled) {
+  background: var(--knsl-dark);
+  color: #fff;
+}
+
+.nosmobilier .knsl-about-slider-1-prev:focus-visible,
+.nosmobilier .knsl-about-slider-1-next:focus-visible {
+  outline: 3px solid var(--knsl-accent);
+  outline-offset: 2px;
+}
+
+.nosmobilier .knsl-about-slider-1-prev:disabled,
+.nosmobilier .knsl-about-slider-1-next:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* ===== Lightbox ===== */
+.nosmobilier .knsl-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.nosmobilier .knsl-lightbox figure {
+  margin: 0;
+  max-width: 90vw;
+  max-height: 90vh;
+  text-align: center;
+}
+
+.nosmobilier .knsl-lightbox figure img {
+  max-width: 100%;
+  max-height: 80vh;
+  display: block;
+  margin: 0 auto;
+}
+
+.nosmobilier .knsl-lightbox figcaption {
+  margin-top: 12px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.nosmobilier .knsl-lightbox-close,
+.nosmobilier .knsl-lightbox-arrow {
+  position: absolute;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.nosmobilier .knsl-lightbox-close {
+  top: 20px;
+  right: 28px;
+  font-size: 40px;
+}
+
+.nosmobilier .knsl-lightbox-arrow {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 56px;
+  padding: 10px 20px;
+}
+
+.nosmobilier .knsl-lightbox-prev { left: 10px; }
+.nosmobilier .knsl-lightbox-next { right: 10px; }
+
+.nosmobilier .knsl-lightbox button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 991px) {
+  .nosmobilier .knsl-mb-100 { margin-bottom: 60px; }
+  .nosmobilier .knsl-title-frame { padding-top: 70px; }
+  .nosmobilier .knsl-image-frame { height: 340px; }
+}
+
+@media (max-width: 575px) {
+  .nosmobilier { padding-bottom: 60px; }
+  .nosmobilier .knsl-image-frame { height: 260px; }
+  .nosmobilier .knsl-btn { padding: 0 28px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nosmobilier * {
+    transition: none !important;
+  }
+}

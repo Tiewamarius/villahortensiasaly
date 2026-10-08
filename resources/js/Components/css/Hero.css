@@ -140,6 +140,33 @@
    En dessous, elles chevaucheraient la barre de réservation :
    on utilise le swipe et les indicateurs à la place.
 ========================================================= */
+.knsl-stars {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+     
+    border-radius: 15px;
+    margin-bottom: 10px;
+    padding: 5px 5px 5px 5px;
+
+    font-size: 13px;
+    list-style: none;
+}
+
+.knsl-stars li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.knsl-stars svg {
+    width: 15px;
+    height: 15px;
+    font-size: 13px;
+
+    color: #f2a23a;
+}
 
 .hero__slider-button {
     position: absolute;
@@ -290,8 +317,12 @@
     width: 20px;
     height: 30px;
 
-    border: 2px solid rgba(255, 255, 255, 0.75);
-    border-radius: 18px;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: relative;
+    width: 24px;
+    height: 40px;
+    border: solid 2px #EBA744;
+    border-radius: 20px;
 }
 
 .hero__mouse-wheel {

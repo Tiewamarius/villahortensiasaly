@@ -3,32 +3,63 @@ import "./css/HomeSection.css";
 
 /* Défini hors du composant : le tableau n'est pas recréé à chaque rendu */
 const amenities = [
-{
-id: 1,
-key: "dining",
-icon: ( <svg viewBox="0 0 64 64" fill="none"> <circle cx="32" cy="34" r="21" stroke="currentColor" strokeWidth="2" /> <circle cx="32" cy="34" r="14" stroke="currentColor" strokeWidth="1.5" />
+// {
+// id: 1,
+// key: "dining",
+// icon: ( <svg viewBox="0 0 64 64" fill="none"> <circle cx="32" cy="34" r="21" stroke="currentColor" strokeWidth="2" /> <circle cx="32" cy="34" r="14" stroke="currentColor" strokeWidth="1.5" />
 
-```
-            {/* Fourchette */}
+ 
+//             {/* Fourchette */}
+//             <path
+//                 d="M17 12V26M13 12V20M21 12V20M17 26V52"
+//                 stroke="currentColor"
+//                 strokeWidth="2"
+//                 strokeLinecap="round"
+//             />
+
+//             {/* Couteau */}
+//             <path
+//                 d="M47 12C43 16 43 22 43 28H48V52"
+//                 stroke="currentColor"
+//                 strokeWidth="2"
+//                 strokeLinecap="round"
+//                 strokeLinejoin="round"
+//             />
+//         </svg>
+//     ),
+// },
+
+{
+    id: 1,
+    key: "airConditioning",
+    icon: (
+        <svg viewBox="0 0 64 64" fill="none">
+            <rect
+                x="7"
+                y="12"
+                width="50"
+                height="23"
+                rx="2"
+                stroke="currentColor"
+                strokeWidth="2"
+            />
+
             <path
-                d="M17 12V26M13 12V20M21 12V20M17 26V52"
+                d="M12 18H39M44 18H49M12 24H17M22 24H27M32 24H37M42 24H47"
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
             />
 
-            {/* Couteau */}
             <path
-                d="M47 12C43 16 43 22 43 28H48V52"
+                d="M20 41C20 44 17 44 17 47M28 41C28 44 25 44 25 47M36 41C36 44 33 44 33 47M44 41C44 44 41 44 41 47"
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
-                strokeLinejoin="round"
             />
         </svg>
     ),
 },
-
 {
     id: 2,
     key: "security",
@@ -154,39 +185,7 @@ icon: ( <svg viewBox="0 0 64 64" fill="none"> <circle cx="32" cy="34" r="21" str
             />
         </svg>
     ),
-},
-
-{
-    id: 5,
-    key: "airConditioning",
-    icon: (
-        <svg viewBox="0 0 64 64" fill="none">
-            <rect
-                x="7"
-                y="12"
-                width="50"
-                height="23"
-                rx="2"
-                stroke="currentColor"
-                strokeWidth="2"
-            />
-
-            <path
-                d="M12 18H39M44 18H49M12 24H17M22 24H27M32 24H37M42 24H47"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-            />
-
-            <path
-                d="M20 41C20 44 17 44 17 47M28 41C28 44 25 44 25 47M36 41C36 44 33 44 33 47M44 41C44 44 41 44 41 47"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-            />
-        </svg>
-    ),
-}, 
+} 
 ];
 
 export default function Amenities() {

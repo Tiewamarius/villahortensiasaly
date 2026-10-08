@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { FaStar } from "react-icons/fa6";
 import BookingWidget from '../Components/BookingWidget'; // ajuste le chemin
 import './css/Hero.css';
 
@@ -78,6 +79,13 @@ export default function Hero() {
 
             {/* Hero content */}
             <div className="hero__content">
+                <ul className="knsl-stars" aria-label="5 étoiles">
+                    {[...Array(5)].map((_, index) => (
+                        <li key={index}>
+                            <FaStar aria-hidden="true" />
+                        </li>
+                    ))}
+                </ul>
                 <div className="hero__title">
                     <h1 className="hero__title-main">{t('hero.title')}</h1>
                     <p className="hero__title-subtitle">{t('hero.subtitle')}</p>
@@ -113,14 +121,15 @@ export default function Hero() {
 
             {/* Scroll indicator */}
             <a href="#content" className="hero__scroll" aria-label={t('hero.scrollAria')}>
+                
+                <span className="hero__scroll-text">{t('hero.scroll')}</span>
                 <span className="hero__mouse">
                     <span className="hero__mouse-wheel" />
                 </span>
-                <span className="hero__scroll-text">{t('hero.scroll')}</span>
             </a>
 
             {/* Slide indicators */}
-            <div className="hero__indicators">
+            {/* <div className="hero__indicators">
                 {slides.map((_, index) => (
                     <button
                         key={index}
@@ -131,7 +140,7 @@ export default function Hero() {
                         aria-current={index === currentSlide}
                     />
                 ))}
-            </div>
+            </div> */}
         </section>
     );
 }
