@@ -104,6 +104,7 @@
 ========================================================= */
 
 .booking-widget .bws-swp-col {
+    display: none !important;
     float: none !important;
 
     width: auto !important;

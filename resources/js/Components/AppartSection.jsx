@@ -1,6 +1,8 @@
 
 import { Link } from "@inertiajs/react";
 import { useTranslation } from "react-i18next";
+import { useBooking } from "../Components/HotelLinkWidget";
+
 import "./css/AppartSection.css";
 
 
@@ -81,6 +83,8 @@ const CheckIcon = () => (
 
 export default function AppartSection() {
     const { t, i18n } = useTranslation();
+
+    const { openBooking } = useBooking();
 
     /*
      * Français :

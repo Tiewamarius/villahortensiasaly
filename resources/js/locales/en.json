@@ -1,277 +1,323 @@
 {
-"nav": {
-"home": "Home",
-"booking": "Booking",
-"rooms": "Gallery",
-"dining": "Dining",
-"contact": "Contact us"
-},
- 
-"header": {
-    "book": "Book now",
-    "menu": "Menu",
-    "openMenu": "Open menu",
-    "closeMenu": "Close menu",
-    "switchLang": "Switch the site to French"
-},
-
-"contact": {
-    "title": "Follow us on social media",
-    "text": "Wherever you are, our team will be happy to help.",
-    "email": "Send an email",
-    "directions": "Get directions",
-    "close": "Close contact panel"
-},
-
-"chat": {
-    "welcome": "Hello! I'm the Résidence Néhémie assistant. I can help with apartments, dining and bookings.",
-    "placeholder": "Type your message…",
-    "suggestions": [
-        "Which apartments do you offer?",
-        "What does the restaurant serve?",
-        "How do I book?"
-    ]
-},
-
-"hero": {
-    "title": "Welcome to Résidence Néhémie",
-    "subtitle": "A haven of peace and comfort.",
-    "bookingLabel": "Check availability",
-    "prev": "Previous image",
-    "next": "Next image",
-    "showSlide": "Show image {{number}}",
-    "scroll": "SCROLL",
-    "scrollAria": "Scroll to content",
-
-    "slides": {
-        "welcome": "Welcome to Résidence Néhémie",
-        "common": "Shared area of the residence",
-        "lounge": "Residence lounge"
-    }
-},
-
-"about": {
-    "label": "About Résidence Néhémie",
-    "title": "A peaceful place designed for your comfort",
-    "text1": "Located in Bingerville, Résidence Néhémie offers a warm and elegant setting where comfort, tranquillity and hospitality come together.",
-    "text2": "Our furnished apartments are designed to make every stay pleasant, whether you are travelling for business, with family or simply looking for a peaceful getaway.",
-    "imageAlt": "Shared area of Résidence Néhémie",
-    "location": "Bingerville, Côte d'Ivoire",
-    "lodging": "Furnished apartments",
-    "button": "Discover the residence"
-},
-
-"appart": {
-     "from": "From",
-    "subtitle": "Our apartments",
-    "title1": "Comfort and elegance.",
-    "title2": "Choose your stay.",
-
-    "perNight": "per night",
-    "book": "Book now",
-    "discover": "Discover",
-
-    "items": {
-        "signature": {
-            "location": "Bingerville",
-            "category": "Signature",
-            "name": "Luxury Room",
-            "features": [
-                "Elegant and comfortable living space",
-                "Fully furnished",
-                "Ideal for short and extended stays"
-            ],
-            "description": "A refined apartment offering a peaceful atmosphere and everything you need for a comfortable stay."
-        },
-
-        "elegance": {
-            "location": "Bingerville",
-            "category": "Elegance",
-            "name": "1-bedroom apartment with a living room",
-            "features": [
-                "Spacious and bright interior",
-                "Modern furnishings",
-                "Comfortable environment"
-            ],
-            "description": "A sophisticated space combining modern comfort, practicality and the warm atmosphere of Résidence Néhémie."
-        },
-
-        "prestige": {
-            "location": "Bingerville",
-            "category": "Prestige",
-            "name": "2-bedroom apartment with a living room",
-            "features": [
-                "Premium accommodation",
-                "Elegant interior design",
-                "Designed for an exceptional stay"
-            ],
-            "description": "An exceptional apartment designed for guests seeking more space, comfort and a refined residential experience."
-        }
-    }
-},
-
-"booking": {
-    "pageTitle": "Booking - Résidence Néhémie",
-    "eyebrow": "Résidence Néhémie · Bingerville, Ivory Coast",
-    "title": "Book your suite",
-    "subtitle": "The best rates are guaranteed when you book direct. No hidden fees.",
-
-    "trust": {
-        "secure": "Secure booking",
-        "rate": "Best rate guarantee",
-        "cancel": "Flexible cancellation available"
-    }
-},
-
-
-"map": {
-    "subtitle": "Our location",
-    "title": "Find us easily",
-    "description": "Résidence Néhémie welcomes you in a pleasant setting, ideally located for your stays, business trips and moments of relaxation.",
-    "directions": "View on Google Maps",
-    "signature": "See you soon!",
-    "iframeTitle": "Location of Résidence Néhémie"
-},
-
-"amenities": {
-    "ariaLabel": "Our amenities",
-    "items": {
-        "dining": "Dining",
-        "security": "Security",
-        "internet": "Internet connection",
-        "nonSmoking": "Non-smoking",
-        "airConditioning": "Air conditioning"
-    }
-},
-
-"gallery": {
+    "nav": {
+        "home": "Home",
+        "booking": "Booking",
+        "rooms": "Our rooms",
+        "about": "About",
+        "contact": "Contact us"
+    },
+    "header": {
+        "book": "Book now",
+        "menu": "Menu",
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu",
+        "switchLang": "Switch the site to French"
+    },
+    "contact": {
+        "title": "Follow us on social media",
+        "text": "Wherever you are, our team will be happy to help.",
+        "email": "Send an email",
+        "directions": "Get directions",
+        "close": "Close contact panel"
+    },
+    "chat": {
+        "welcome": "Hello! I'm the Résidence Hortensia assistant. I can help you with apartments, dining and bookings.",
+        "placeholder": "Type your message…",
+        "suggestions": [
+            "Which apartments do you offer?",
+            "What does the restaurant serve?",
+            "How do I book?"
+        ]
+    },
     "hero": {
-        "subtitle": "DISCOVER OUR SPACES",
-        "title": "Apartment Gallery",
-        "description": "Explore our apartments through images and choose the one that suits you best."
+        "title": "Welcome to Résidence Hortensia",
+        "subtitle": "A haven of peace and comfort.",
+        "bookingLabel": "Check availability",
+        "prev": "Previous image",
+        "next": "Next image",
+        "showSlide": "Show image {{number}}",
+        "scroll": "Scroll to explore",
+        "scrollAria": "Scroll to content",
+        "slides": {
+            "welcome": "Welcome to Résidence Hortensia",
+            "common": "Shared area of the residence",
+            "lounge": "Residence lounge"
+        }
     },
-
-    "heroMedia": {
-        "residence": "Résidence Néhémie",
-        "apartment": "Résidence Néhémie apartment",
-        "outdoor": "Résidence Néhémie outdoor area"
+    "about": {
+        "label": "About Résidence Hortensia",
+        "title": "A peaceful place designed for your comfort",
+        "text1": "Located in Bingerville, Résidence Hortensia welcomes you to a warm and elegant setting where comfort, tranquillity and hospitality come together.",
+        "text2": "Our furnished apartments are designed to make every stay enjoyable, whether you are travelling for business, with family or simply looking for a peaceful place to unwind.",
+        "imageAlt": "Shared area of Résidence Hortensia",
+        "location": "Bingerville, Côte d'Ivoire",
+        "lodging": "Furnished apartments",
+        "button": "Discover the residence",
+        "secondButton": "See more"
     },
-
-    "sectionLabel": "OUR APARTMENTS",
-    "book": "Book now",
-    "chooseApartment": "Choose an apartment",
-    "photos": "photos",
-    "viewPhoto": "View {{caption}}",
-
-    "locations": {
-        "bingerville": "Bingerville, Ivory Coast"
+    "aboutSecondair": {
+        "title": "Welcome to Résidence Hortensia",
+        "text1": "Treat yourself to a relaxing and comfortable stay in a welcoming setting where every moment brings peace and well-being.",
+        "imageAlt": "Shared area of Résidence Hortensia",
+        "location": "Bingerville, Côte d'Ivoire",
+        "lodging": "Furnished apartments",
+        "button": "Discover the residence"
     },
-
-    "apartments": {
-        "apartment1": {
-            "title": "Apartment 1",
-            "images": {
-                "livingRoom": "Bright living room and living space",
-                "masterBedroom": "Master bedroom",
-                "terrace": "Terrace overlooking the garden"
-            }
-        },
-
-        "apartment2": {
-            "title": "Apartment 2",
-            "images": {
-                "modernLivingRoom": "Modern and comfortable living room",
-                "premiumBedroom": "Bedroom with premium bedding",
-                "privateOutdoor": "Private outdoor space"
-            }
-        },
-
-        "apartment3": {
-            "title": "Apartment 3",
-            "images": {
-                "livingSpace": "Living area",
-                "masterBedroom": "Master bedroom",
-                "terrace": "Apartment terrace"
+    "appart": {
+        "from": "From",
+        "subtitle": "Our apartments",
+        "title1": "Comfort and elegance.",
+        "title2": "Choose your stay.",
+        "perNight": "per night",
+        "book": "Book now",
+        "discover": "Discover",
+        "items": {
+            "signature": {
+                "location": "Bingerville",
+                "category": "Signature",
+                "name": "Luxury Room",
+                "features": [
+                    "Elegant and comfortable living space",
+                    "Fully furnished",
+                    "Ideal for short and extended stays"
+                ],
+                "description": "A refined apartment offering a peaceful atmosphere and everything you need for a comfortable stay."
+            },
+            "elegance": {
+                "location": "Bingerville",
+                "category": "Elegance",
+                "name": "One-bedroom apartment with a living room",
+                "features": [
+                    "Spacious and bright interior",
+                    "Modern furnishings",
+                    "Comfortable surroundings"
+                ],
+                "description": "A sophisticated space combining modern comfort, practicality and the welcoming atmosphere of Résidence Hortensia."
+            },
+            "prestige": {
+                "location": "Bingerville",
+                "category": "Prestige",
+                "name": "Two-bedroom apartment with a living room",
+                "features": [
+                    "Premium accommodation",
+                    "Elegant interior design",
+                    "Designed for an exceptional stay"
+                ],
+                "description": "An exceptional apartment designed for guests seeking more space, comfort and a refined residential experience."
             }
         }
     },
-
-    "lightbox": {
-        "preview": "Photo preview",
-        "close": "Close photo",
-        "photo": "Photo {{number}}"
-    }
-},
- 
-"restauration": {
-  "pageTitle": "Dining - Résidence Néhémie",
-
-  "hero": {
-    "ariaLabel": "Our dining experience",
-    "previous": "Previous slide",
-    "next": "Next slide",
-    "goToSlide": "Go to slide {{number}}"
-  },
-
-  "slides": {
-    "table": {
-      "title": "The Résidence Néhémie dining experience",
-      "text": "Freshly prepared cuisine to enjoy in a relaxed and welcoming setting."
+    "booking": {
+        "pageTitle": "Booking - Résidence Hortensia",
+        "eyebrow": "Résidence Hortensia · Bingerville, Côte d'Ivoire",
+        "title": "Book your stay",
+        "subtitle": "Enjoy our best rates when you book directly. No hidden fees.",
+        "trust": {
+            "secure": "Secure booking",
+            "rate": "Best rate guarantee",
+            "cancel": "Flexible cancellation available"
+        }
     },
-    "flavors": {
-      "title": "Flavours from here and beyond",
-      "text": "Ivorian dishes, grilled specialties and recipes from around the world."
+    "map": {
+        "subtitle": "Our location",
+        "title": "Find us easily",
+        "description": "Résidence Hortensia welcomes you in a pleasant setting, ideally located for your stays, business trips and moments of relaxation.",
+        "directions": "View on Google Maps",
+        "signature": "See you soon!",
+        "iframeTitle": "Location of Résidence Hortensia"
     },
-    "anywhere": {
-      "title": "A meal wherever you prefer",
-      "text": "Enjoy your meal in the dining area, on the terrace or directly in your apartment."
-    }
-  },
-
-  "intro": {
-    "title": "Enjoy great food without leaving the residence",
-    "text": "At Résidence Néhémie, dining is part of the experience. Our cooks work with fresh, local ingredients to offer simple, generous meals prepared to order, whether you are travelling for business, with family or with friends."
-  },
-
-  "offers": {
-    "breakfast": {
-      "title": "Breakfast",
-      "text": "Fresh bread, pastries, seasonal fruit, eggs of your choice, coffee and freshly pressed juices to start your day well."
+    "amenities": {
+        "ariaLabel": "Our amenities",
+        "items": {
+            "dining": "Dining",
+            "security": "Security",
+            "internet": "Internet connection",
+            "nonSmoking": "Non-smoking",
+            "airConditioning": "Air conditioning"
+        }
     },
-    "lunchDinner": {
-      "title": "Lunch and dinner",
-      "text": "A concise menu that changes regularly, featuring grilled fish and meats, attiéké, alloco, rice dishes and daily specials."
+    "gallery": {
+        "hero": {
+            "subtitle": "DISCOVER OUR SPACES",
+            "title": "Apartment Gallery",
+            "description": "Explore our apartments through images and choose the one that suits you best."
+        },
+        "heroMedia": {
+            "residence": "Résidence Hortensia",
+            "apartment": "Résidence Hortensia apartment",
+            "outdoor": "Résidence Hortensia outdoor area"
+        },
+        "sectionLabel": "OUR APARTMENTS",
+        "book": "Book now",
+        "chooseApartment": "Choose an apartment",
+        "photos": "photos",
+        "viewPhoto": "View {{caption}}",
+        "locations": {
+            "bingerville": "Bingerville, Côte d'Ivoire"
+        },
+        "apartments": {
+            "apartment1": {
+                "title": "Apartment 1",
+                "images": {
+                    "livingRoom": "Bright living room and living space",
+                    "masterBedroom": "Master bedroom",
+                    "terrace": "Terrace overlooking the garden"
+                }
+            },
+            "apartment2": {
+                "title": "Apartment 2",
+                "images": {
+                    "modernLivingRoom": "Modern and comfortable living room",
+                    "premiumBedroom": "Bedroom with premium bedding",
+                    "privateOutdoor": "Private outdoor space"
+                }
+            },
+            "apartment3": {
+                "title": "Apartment 3",
+                "images": {
+                    "livingSpace": "Living area",
+                    "masterBedroom": "Master bedroom",
+                    "terrace": "Apartment terrace"
+                }
+            }
+        },
+        "lightbox": {
+            "preview": "Photo preview",
+            "close": "Close photo",
+            "photo": "Photo {{number}}"
+        }
     },
-    "roomService": {
-      "title": "In-apartment dining",
-      "text": "Order at reception or via WhatsApp, and we will bring your meal directly to your apartment."
-    }
-  },
-
-  "hours": {
-    "title": "Service hours",
-    "breakfast": {
-      "label": "Breakfast"
+    "restauration": {
+        "pageTitle": "Dining - Résidence Hortensia",
+        "hero": {
+            "ariaLabel": "Our dining experience",
+            "previous": "Previous slide",
+            "next": "Next slide",
+            "goToSlide": "Go to slide {{number}}"
+        },
+        "slides": {
+            "table": {
+                "title": "The Résidence Hortensia dining experience",
+                "text": "Freshly prepared cuisine to enjoy in a relaxed and welcoming setting."
+            },
+            "flavors": {
+                "title": "Flavours from here and beyond",
+                "text": "Ivorian dishes, grilled specialities and recipes from around the world."
+            },
+            "anywhere": {
+                "title": "A meal wherever you prefer",
+                "text": "Enjoy your meal in the dining area, on the terrace or directly in your apartment."
+            }
+        },
+        "intro": {
+            "title": "Enjoy great food without leaving the residence",
+            "text": "At Résidence Hortensia, dining is part of the experience. Our cooks use fresh, local ingredients to prepare simple, generous meals to order, whether you are travelling for business, with family or with friends."
+        },
+        "offers": {
+            "breakfast": {
+                "title": "Breakfast",
+                "text": "Fresh bread, pastries, seasonal fruit, eggs of your choice, coffee and freshly pressed juices to start your day well."
+            },
+            "lunchDinner": {
+                "title": "Lunch and dinner",
+                "text": "A concise menu that changes regularly, featuring grilled fish and meat, attiéké, alloco, rice dishes and daily specials."
+            },
+            "roomService": {
+                "title": "In-apartment dining",
+                "text": "Order at reception or via WhatsApp, and we will bring your meal directly to your apartment."
+            }
+        },
+        "hours": {
+            "title": "Service hours",
+            "breakfast": {
+                "label": "Breakfast"
+            },
+            "lunch": {
+                "label": "Lunch"
+            },
+            "dinner": {
+                "label": "Dinner"
+            }
+        },
+        "cta": {
+            "title": "Craving something or have a question?",
+            "text": "Special dietary requirements, group meals or birthdays: let us know in advance and we will take care of the rest.",
+            "whatsapp": "Message us on WhatsApp",
+            "reservation": "Book an apartment"
+        }
     },
-    "lunch": {
-      "label": "Lunch"
+    "footer": {
+        "tagline": "Follow us on social media",
+"copyright": "© 2026 La Villa Hortensia SN. All rights reserved."
+
     },
-    "dinner": {
-      "label": "Dinner"
-    }
-  },
+    "rooms": {
+        "details": "Details",
+        "adults": "Adults:",
+        "children": "Children:",
+        "facilitiesLabel": "Facilities:",
+        "size": "Size:",
+        "sizeValue": "{{value}} ft²",
+        "categories": "Categories:",
+        "book": "Book now",
+        "prev": "Previous slide",
+        "next": "Next slide",
+        "category": {
+            "economy": "Economy",
+            "standard": "Standard"
+        },
+        "facilities": {
+            "4-private-pools": "4 private pools",
+            "air-conditioning": "Air conditioning",
+            "airport-transfer": "Airport transfer",
+            "all-inclusive": "All-inclusive",
+            "wifi": "Free Wi-Fi",
+            "laundry": "Laundry service",
+            "smart-tv": "Smart TV",
+            "under-protection": "Secure"
+        },
+        "items": {
+            "economyClassic": {
+                "title": "Classic Economy Room",
+                "description": "A simple and comfortable room, ideal for a seaside stay."
+            },
+            "tripleClassic": {
+                "title": "Classic Triple Room",
+                "description": "A spacious room accommodating up to three adults and two children."
+            },
+            "standard": {
+                "title": "Standard Room",
+                "description": "A bright, well-equipped room for an enjoyable stay at the residence."
+            },
+            "double": {
+                "title": "Double Room",
+                "description": "An elegant room for two guests, offering a peaceful setting."
+            }
+        },
+        "heading": {
+            "title": "Our best rooms",
+            "text": "Bright and comfortable rooms designed for your relaxation.",
+            "cta": "All rooms"
+        }
 
-  "cta": {
-    "title": "Craving something or have a question?",
-    "text": "Special dietary requirements, group meals or birthdays: let us know in advance and we will take care of the rest.",
-    "whatsapp": "Message us on WhatsApp",
-    "reservation": "Book an apartment"
-  }
-},
+    },
+    
 
-
-"footer": {
-    "tagline": "Follow us on social media"
-} 
-
+        "nosmobilier": {
+"heading": "Villa Hortensia awaits you",
+"description": "Enjoy personalised service and premium amenities for an unforgettable stay.",
+"cta": "Our furnishings",
+"enlarge": "Enlarge: {{title}}",
+"previous": "Previous slide",
+"next": "Next slide",
+"previousImage": "Previous image",
+"nextImage": "Next image",
+"close": "Close",
+"gallery": {
+"seaView": "Sea view",
+"eastTerrace": "East terrace",
+"westTerrace": "West terrace",
+"beachView": "Beach view"
+}
+}
 }

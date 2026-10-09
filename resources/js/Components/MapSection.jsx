@@ -8,24 +8,33 @@ import {
 import { useTranslation } from "react-i18next";
 import "./css/SectionMap.css";
 
-/*
-|--------------------------------------------------------------------------
-| INFORMATIONS DE LA RÉSIDENCE
-|--------------------------------------------------------------------------
-*/
+/* --------------------------------------------------------------------------
+   INFORMATIONS DE LA RÉSIDENCE
+-------------------------------------------------------------------------- */
 
 const LOCATION = {
-    name: "Résidence Néhémie",
-    address: "1725 Rue Lambert Feh-Kesse, Bingerville",
+    name: "Villa Hortensia",
+    address: "FX54+9C, Saly, Sénégal",
     phone: "+225 05 00 32 68 68",
-    email: "info@residencenehemie.com",
+    email: "info@villahortensiasaly.com",
 };
 
-const mapEmbedUrl =
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.1821716363106!2d-3.9155399255394325!3d5.389184494589828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc193d6ba52ab41%3A0xa69fdec5c7555353!2zUsOpc2lkZW5jZSBOw6low6ltaWU!5e0!3m2!1sfr!2sci!4v1757603653750!5m2!1sfr!2sci";
+/* --------------------------------------------------------------------------
+   NOUVELLE LOCALISATION GOOGLE MAPS
+-------------------------------------------------------------------------- */
+const googleMapsUrl =
+    "https://maps.app.goo.gl/S2tPoQ4dPizxVtEa6?g_st=ipc";
 
+// Carte intégrée dans la page
+const mapEmbedUrl =
+    "https://maps.google.com/maps?q=VILLA%20HORTENSIA%2C%20FX54%2B9C%2C%20Saly%2C%20S%C3%A9n%C3%A9gal&output=embed";
+
+// Bouton pour ouvrir l'itinéraire Google Maps
 const directionsUrl =
-    "https://www.google.com/maps/dir/?api=1&destination=5.389184494589828,-3.9155399255394325";
+    "https://www.google.com/maps/dir/?api=1&destination=14.4584256,-17.0439352";
+/* --------------------------------------------------------------------------
+   SECTION LOCALISATION
+-------------------------------------------------------------------------- */
 
 export default function MapSection() {
     const { t } = useTranslation();
@@ -52,9 +61,8 @@ export default function MapSection() {
                 {/* Carte et informations */}
                 <div className="map-card">
 
-                    {/* Informations */}
+                    {/* Informations de contact */}
                     <div className="map-info">
-
                         <div className="map-info-item">
                             <div className="map-icon">
                                 <FaMapMarkerAlt />
@@ -92,14 +100,14 @@ export default function MapSection() {
                         </div>
 
                         <a
-                            href={directionsUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="map-directions-btn"
-                        >
-                            <FaLocationArrow />
-                            {t("map.directions")}
-                        </a>
+    href={directionsUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="map-directions-btn"
+>
+    <FaLocationArrow />
+    {t("map.directions")}
+</a>
 
                         <div className="map-signature">
                             {t("map.signature")}
@@ -124,4 +132,4 @@ export default function MapSection() {
             </div>
         </section>
     );
-}
+} 

@@ -6,8 +6,8 @@ import { createRoot } from 'react-dom/client';
 
 createInertiaApp({
     title: (title) => title
-        ? `${title} - Résidence Néhémie`
-        : 'Résidence Néhémie',
+        ? `${title} - Résidence Hortensia saly`
+        : 'Résidence Hortensia saly',
 
     resolve: (name) =>
         resolvePageComponent(

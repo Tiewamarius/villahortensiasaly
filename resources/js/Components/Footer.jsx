@@ -12,16 +12,18 @@ import {
 import "./css/Footer.css";
 
 const QUICK_LINKS = [
-    { key: "nav.booking", href: "/reservation" },
+    { key: "nav.home", href: "/" },
     { key: "nav.rooms", href: "/rooms" },
-    { key: "nav.dining", href: "/restauration" },
-    { key: "nav.contact", href: "/contact" },
+
+    { href: "/#about", key: "nav.about" },
+    // { key: "nav.dining", href: "/restauration" },
+    // { key: "nav.contact", href: "/contact" },
 ];
 
 const SOCIALS = [
-    { label: "WhatsApp", href: "https://wa.me/2250500326868", Icon: FaWhatsapp },
-    { label: "TikTok", href: "https://www.tiktok.com/@residencenehemie2", Icon: FaTiktok },
-    { label: "Instagram", href: "https://www.instagram.com/residencenehemie", Icon: FaInstagram },
+    { label: "WhatsApp", href: "https://wa.me/221785946983", Icon: FaWhatsapp },
+    { label: "TikTok", href: "https://www.tiktok.com/@villahortensiasaly", Icon: FaTiktok },
+    { label: "Instagram", href: "https://www.instagram.com/villahortensiasaly", Icon: FaInstagram },
     {
         label: "Facebook",
         href: "https://www.facebook.com/share/1BkydohdQK/?mibextid=wwXIfr",
@@ -41,7 +43,7 @@ export default function Footer() {
                     {/* Identité */}
                     <div className="knsl-footer__brand">
                         <Link href="/" aria-label={t("footer.homeAria")}>
-                            <img src="/img/logoRNwhite.png" alt="Résidence Néhémie" />
+                            <img src="/img/logo.png" alt="Résidence Néhémie" />
                         </Link>
 
                         <p>{t("footer.tagline")}</p>

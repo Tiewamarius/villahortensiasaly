@@ -9,10 +9,11 @@ const SWIPE_THRESHOLD = 50;
 
 const slides = [
     { image: '/img/Hero-Gallery/Accueil/1.jpg', altKey: 'hero.slides.welcome' },
-    { image: '/img/Hero-Gallery/Accueil/2.jpg', altKey: 'hero.slides.welcome' },
+    // { image: '/img/SALY HORTENSIA/28.jpg', altKey: 'hero.slides.welcome' },
     { image: '/img/Hero-Gallery/Accueil/3.jpg', altKey: 'hero.slides.common' },
     { image: '/img/Hero-Gallery/Accueil/4.jpg', altKey: 'hero.slides.lounge' },
     { image: '/img/Hero-Gallery/Accueil/5.jpg', altKey: 'hero.slides.lounge' },
+    
 ];
 
 export default function Hero() {
@@ -96,7 +97,7 @@ export default function Hero() {
             </div>
 
             {/* Slider previous (desktop uniquement) */}
-            <button
+            {/* <button
                 type="button"
                 className="hero__slider-button hero__slider-button--prev"
                 onClick={previousSlide}
@@ -105,10 +106,10 @@ export default function Hero() {
                 <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
                     <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-            </button>
+            </button> */}
 
             {/* Slider next (desktop uniquement) */}
-            <button
+            {/* <button
                 type="button"
                 className="hero__slider-button hero__slider-button--next"
                 onClick={nextSlide}
@@ -117,7 +118,7 @@ export default function Hero() {
                 <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
                     <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-            </button>
+            </button> */}
 
             {/* Scroll indicator */}
             <a href="#content" className="hero__scroll" aria-label={t('hero.scrollAria')}>

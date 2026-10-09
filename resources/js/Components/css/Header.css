@@ -57,6 +57,28 @@
         box-shadow 0.3s ease;
 }
 
+/* =========================================================
+   BOUTONS DU HEADER
+========================================================= */
+
+.site-header button.reserve-button {
+    font-family: inherit;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+/* =========================================================
+   DÉFILEMENT VERS ABOUT
+========================================================= */
+ 
+
+/* Respecter les préférences d'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+    #about {
+        scroll-behavior: auto;
+    }
+}
 .e-far-bookmark {
     color: #ffff;
 }
@@ -265,7 +287,6 @@
     width: 100%;
 }
 
-
 /* =========================================================
    PAGE ACTIVE
 ========================================================= */
@@ -277,6 +298,16 @@
 .site-header .main-navigation a.active::after {
     width: 100%;
 }
+
+/* About est une ancre : aucun soulignement permanent. */
+.site-header .main-navigation a[href="/#about"]::after {
+    width: 0;
+}
+
+/* Le survol reste possible sur About. */
+.site-header .main-navigation a[href="/#about"]:hover::after {
+    width: 100%;
+} 
 
 
 /* =========================================================

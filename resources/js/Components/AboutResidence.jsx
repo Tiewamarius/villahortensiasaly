@@ -63,7 +63,7 @@ export default function AboutVilla() {
     const { t } = useTranslation();
 
     return (
-        <section className="about-villa-section">
+        <section id="about" className="about-villa-section">
 
             <div className="about-villa-container">
 

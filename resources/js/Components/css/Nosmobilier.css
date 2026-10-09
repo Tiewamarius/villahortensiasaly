@@ -2,12 +2,12 @@
 
 .nosmobilier {
   --knsl-accent: #c9a46a;
-  --knsl-dark: #1c1c1c;
+  --knsl-dark: #4164dc;
   --knsl-text: #6b6b6b;
   --knsl-bg: #fff;
 
   position: relative;
-  padding: 0 0 100px;
+  /* padding: 0 0 100px; */
   overflow: hidden;
   background: var(--knsl-bg);
 }
